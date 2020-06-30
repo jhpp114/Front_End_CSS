@@ -6,27 +6,49 @@
 
 header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    background-color: blueviolet;
+    min-height: 8vh;
 }
 
-header h3 {
+header section {
     background-color: aqua;
-    padding-right: 4em;
+    padding-right: 2rem;
+    font-size: 2rem;
+    /* align-items: flex-start; */
+    justify-content: flex-start;
 }
 
 header nav ul {
     display: flex;
     background-color: red;
-    justify-content: space-around;
-    
+    justify-content: flex-end;
+    padding-left: 1.8rem;
 }
 
 header nav ul li {
     text-decoration: none;
     list-style: none;
-    /* padding: 0 1.1rem; */
+    padding: 0 0.8rem;
 }
 
-header nav .nav_btn {
+header .nav_btn {
+    float: right;
+}
+
+header .nav_btn button a {
+    float: right;
+}
+
+header .burger_menu {
+    display: none;
+}
+
+header .burger_menu div {
+    background-color: white;
+    width: 2rem;
+    height: 0.4rem;
+    margin: 0.4rem;
+    
 }
