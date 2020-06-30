@@ -113,3 +113,10 @@ section .main_contents_btn button:hover {
     color: rgb(36, 36, 36);
     background-color: var(--menu_icon_color);
 }
+
+section .footer {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin: 8rem auto;
+}
