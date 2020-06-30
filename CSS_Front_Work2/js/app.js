@@ -9,4 +9,16 @@ const burger_menu_toggler = () => {
     console.log("hello");
 };
 
+const dynamic_comment = document.querySelector('.dynamic_comment');
+let contextArray = ["website.", "shop.", "blog.", "business.", "landing.", "protfolio."];
+let counter = 0;
+const changeContext = () => {
+    dynamic_comment.textContent = contextArray[counter];
+    counter++;
+    if (counter >= contextArray.length) {
+        counter = 0;
+    }
+};
+
+let changeText = setInterval(changeContext, 2000);
 burger_menu_toggler();

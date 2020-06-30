@@ -3,7 +3,7 @@
 :root {
     --menu_font_color: rgb(114, 114, 114);
     --menu_button_color: rgb(149, 124, 195);
-    --menu_background_color: rgb(236, 236, 236);
+    --menu_background_color: rgba(236, 236, 236, 0.7);
 }
 
 * {
@@ -15,7 +15,12 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
-
+.heading_section {
+    background-image: url('../images/mainImage.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 header {
     display: flex;
     justify-content: space-around;
@@ -94,6 +99,30 @@ header .burger_menu div {
     transform: translateY(0%);
 }
 
+/* Main CSS */
+main > .intro {
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+main > .intro i {
+    color: yellow;
+    padding-right: .5em;
+}
+
+main > h1 {
+    text-align: center;
+    width: 40%;
+    padding: 3rem;
+    margin: 10 auto;
+    font-size: 1.8rem;
+    text-align: left;
+} 
+
 /* Meida query for Menu */
 @media (max-width: 1000px) {
     body {
@@ -116,5 +145,18 @@ header .burger_menu div {
     }
     header .burger_menu {
         display: block;
+    }
+
+    main > .intro i {
+        color: yellow;
+        padding-right: .5em;
+    }
+
+    main > h1 {
+        width: 70%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 1.6rem;
+        padding: 0 3rem;
     }
 }
