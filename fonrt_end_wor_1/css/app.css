@@ -14,10 +14,11 @@ body {
     --menu_icon_color: rgb(214, 214, 214);
 }
 
-section {
+body {
     background-image: url("../images/LookUp.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center;
+    background-size: 100%;
 }
 
 header {
@@ -75,6 +76,7 @@ section .main_container h1{
     text-align: center;
     text-transform: uppercase;
     font-size: 3rem;
+    letter-spacing: 0.8rem;
     color: var(--menu_icon_color);
 }
 
@@ -84,6 +86,30 @@ section .main_contents {
 
 section .main_contents p {
     text-align: center;
-    margin: 1rem 23rem;
+    margin: 1rem 20rem;
+    letter-spacing: 0.2rem;
 }
 
+section .main_contents_btn {
+    margin: 1rem 23rem;
+    /* background-color: pink; */
+    text-align: center;
+}
+
+section .main_contents_btn button {
+    width: 10rem;
+    height: 3rem;
+    font-size: 1rem;
+    text-align: center;
+    background: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid var(--menu_icon_color);
+    color: var(--menu_icon_color);
+    transition: background-color 0.2s ease-in;
+}
+
+section .main_contents_btn button:hover {
+    color: rgb(36, 36, 36);
+    background-color: var(--menu_icon_color);
+}
