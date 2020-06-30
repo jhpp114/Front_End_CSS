@@ -89,22 +89,29 @@ header .burger_menu div {
     margin: 0.4rem;
 }
 
+/* Helper css for javascript on toggle effect */
+.burger_menu_active {
+    transform: translateY(0%);
+}
+
 /* Meida query for Menu */
 @media (max-width: 1000px) {
     body {
-        background-color: blue;
+        overflow: hidden;
     }
     header nav ul {
         display: flex;
         flex-direction: column;
         position: absolute;
-        right: 100%;
-        top: 4rem;
+        right: 0rem;
+        top: 4.5rem;
         width: 100%;
-        background-color: aqua;
-        opacity: 0;
+        background-color: antiquewhite;
+        transform: translateY(-150%);
+        transition: transform 0.8s ease-in-out;
     }
     header nav ul li {
+        opacity: 1;
         padding: .5rem 0;
     }
     header .burger_menu {
