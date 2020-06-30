@@ -1,54 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --menu_font_color: rgb(114, 114, 114);
+    --menu_button_color: rgb(149, 124, 195);
+    --menu_background_color: rgb(236, 236, 236);
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: blueviolet;
     min-height: 8vh;
+    background-color: var(--menu_background_color);
 }
 
 header section {
-    background-color: aqua;
+    display: fixed;
     padding-right: 2rem;
     font-size: 2rem;
-    /* align-items: flex-start; */
     justify-content: flex-start;
 }
 
 header nav ul {
     display: flex;
-    background-color: red;
     justify-content: flex-end;
     padding-left: 1.8rem;
 }
 
 header nav ul li {
-    text-decoration: none;
     list-style: none;
     padding: 0 0.8rem;
 }
 
-header .nav_btn {
-    float: right;
+header nav ul li a {
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: var(--menu_font_color);
+    cursor: pointer;
+    transition: font-size border 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    font-size: 1rem;
+    border-bottom: 2px solid black;
+}
+
+header .nav_btn button {
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    background-color: var(--menu_button_color);
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 header .nav_btn button a {
-    float: right;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
 }
 
+header .nav_btn button:hover {
+    transform: translateY(-5px);
+}
+
+/* ========Hamberger======= */
 header .burger_menu {
     display: none;
+    cursor: pointer;
 }
 
 header .burger_menu div {
-    background-color: white;
+    background-color: var(--menu_font_color);
     width: 2rem;
     height: 0.4rem;
     margin: 0.4rem;
-    
+}
+
+/* Meida query for Menu */
+@media (max-width: 1000px) {
+    body {
+        background-color: blue;
+    }
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 100%;
+        top: 4rem;
+        width: 100%;
+        background-color: aqua;
+        opacity: 0;
+    }
+    header nav ul li {
+        padding: .5rem 0;
+    }
+    header .burger_menu {
+        display: block;
+    }
 }
