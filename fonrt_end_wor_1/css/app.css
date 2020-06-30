@@ -119,4 +119,10 @@ section .footer {
     font-size: 2rem;
     text-align: center;
     margin: 8rem auto;
+    cursor: pointer;
+    transition: font-size 0.3s ease-in;
+}
+
+section .footer i:hover {
+    font-size: large;
 }
