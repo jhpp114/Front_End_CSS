@@ -20,5 +20,11 @@ const changeContext = () => {
     }
 };
 
-let changeText = setInterval(changeContext, 2000);
+const apply_changed_context = () => {
+    return new Promise( () => {
+        setInterval(changeContext, 2000);
+    });
+};
+
+apply_changed_context();
 burger_menu_toggler();

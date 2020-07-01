@@ -15,6 +15,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
 .heading_section {
     background-image: url('../images/mainImage.jpg');
     background-repeat: no-repeat;
@@ -68,7 +69,7 @@ header .nav_btn button {
     background-color: var(--menu_button_color);
     border-radius: 2rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.3s ease-in-out;
 }
 
 header .nav_btn button a {
@@ -126,7 +127,7 @@ main > h1 {
 /* Meida query for Menu */
 @media (max-width: 1000px) {
     body {
-        overflow: hidden;
+        overflow-x: hidden;
     }
     header nav ul {
         display: flex;
@@ -178,6 +179,7 @@ main > h1 {
         text-align: center;
         padding: 1rem;
         line-height: 1.5rem;
+        letter-spacing: 0.1em;
     }
 
     main .selection_button {
@@ -192,11 +194,18 @@ main > h1 {
         border: none;
         border-radius: 1.5rem;
         font-weight: bold;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    main .selection_button button:hover {
+        transform: translateY(-10%);
     }
 
     main .selection_button .getBtn {
         background-color: var(--menu_button_color);
         color: white;
+        
     }
 
     main .selection_button .demoBtn {
@@ -216,8 +225,41 @@ main > h1 {
         margin: 0.7rem;
         line-height: 1.4rem;
         text-align: center;
+        letter-spacing: 0.1em;
     }
 
-    
+    .second_main .second_list_options {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+        column-gap: 2.5rem;
+        row-gap: 1rem;
+        margin: 1rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .second_main .second_list_options .grid-item {
+        width: 100%;
+        height: 100%;
+        background-color:  rgb(190, 190, 190);
+        border-radius: 2rem;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        padding: 0rem 0.5rem;
+    }
+
+    .second_main .second_list_options .grid-item:hover {
+        transform: translateY(-10%);
+        font-size: 1.2rem;
+    }
+
+    .second_main .second_list_options .grid-item a {
+        text-decoration: none;
+        font-weight: 2rem;
+        color: white;
+    }
+
     
 }
