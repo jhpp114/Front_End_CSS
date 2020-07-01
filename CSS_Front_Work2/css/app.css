@@ -4,6 +4,7 @@
     --menu_font_color: rgb(114, 114, 114);
     --menu_button_color: rgb(149, 124, 195);
     --menu_background_color: rgba(236, 236, 236, 0.7);
+    --main_font_color: rgb(53, 53, 53);
 }
 
 * {
@@ -22,6 +23,7 @@ body {
     background-position: center;
     background-size: cover;
 }
+
 header {
     display: flex;
     justify-content: space-around;
@@ -100,14 +102,22 @@ header .burger_menu div {
     transform: translateY(0%);
 }
 
+
 /* Main CSS */
+
+main {
+    padding: 1rem;
+    height: 100vh;
+}
+
 main > .intro {
     margin-top: 5rem;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    text-align: left;
     font-size: 1.3rem;
     padding: 1rem;
+    position: relative;
 }
 
 main > .intro i {
@@ -117,17 +127,156 @@ main > .intro i {
 
 main > h1 {
     text-align: center;
-    width: 40%;
-    padding: 3rem;
+    width: 60%;
+    padding-left: 2rem;
+    padding-right: 2rem;
     margin: 10 auto;
-    font-size: 1.8rem;
+    font-size: 4rem;
     text-align: left;
+    color: var(--main_font_color);
 } 
+
+main > .main_paragraph {
+    padding-left: 3rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 40%;
+    letter-spacing: 0.2rem;
+    color: var(--main_font_color);
+}
+
+main .img_right img {
+    position: absolute;
+    top: 10rem;
+    right: 0rem;
+    padding-right: 8rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    width: 45%;
+    height: 60%;
+}
+
+main .selection_button {
+    padding-right: 2rem;
+    margin: 2rem 2rem;
+    height: 4rem;
+    width: 50rem;
+}
+
+main .selection_button button {
+    width: 12rem;
+    height: 3rem;
+    margin-right: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+main .selection_button button:hover {
+    transform: translateY(-10%);
+}
+
+main .selection_button .getBtn {
+    background-color: var(--menu_button_color);
+    color: white;
+}
+
+main .selection_button .demoBtn {
+    background-color: rgb(122, 122, 122);
+    color: white;
+}
+
+main .chat_icon_fixed {
+    font-size: 2rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 2rem;
+}
+
+.second_main_header {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 3rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    color: var(--menu_font_color);
+}
+
+.second_main .second_main_paragraph {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.second_main .second_list_options {
+    width: 70%;
+    height: 4rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.second_main .second_list_options .grid-item {
+    background-color:  rgb(190, 190, 190);
+    border-radius: 2rem;
+    width: 20%;
+    padding: 0.6rem;
+    margin: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.second_main .second_list_options .grid-item:hover {
+    transform: translateY(-10%);
+}
+
+.second_main .second_list_options .grid-item a {
+    text-decoration: none;
+    font-weight: 2rem;
+    color: white;
+}
+
+.second_main .option_gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin: 2rem 0;
+    padding: 2rem 3rem;
+}
+
+.second_main .option_gallery .figure_img {
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+} 
+
+.second_main .option_gallery .figure_img:hover {
+    transform: translateY(-13%);
+}
+
+.second_main .option_gallery .figure_img img {
+    width: 100%;
+}   
 
 /* Meida query for Menu */
 @media (max-width: 1000px) {
     body {
         overflow-x: hidden;
+    }
+    
+    header section h3 {
+        position: relative;
     }
     header nav ul {
         display: flex;
@@ -137,9 +286,11 @@ main > h1 {
         top: 4.5rem;
         width: 100%;
         background-color: antiquewhite;
-        transform: translateY(-150%);
-        transition: transform 0.8s ease-in-out;
+        transform: translateY(-130%);
+        /* transition: transform 0.8s ease-in-out; */
+        z-index: 2;
     }
+
     header nav ul li {
         opacity: 1;
         padding: .5rem 0;
@@ -147,6 +298,11 @@ main > h1 {
 
     header .burger_menu {
         display: block;
+    }
+
+    main {
+        padding: 0rem;
+        height: auto;
     }
 
     main > .intro {
@@ -171,19 +327,24 @@ main > h1 {
         padding: 0rem 3rem;
     }
 
-    /* main h1 .dynamic_comment {
-        transition: transform 0.2s ease-in-out;
-    } */
-
     main .main_paragraph {
         text-align: center;
-        padding: 1rem;
+        margin: 1rem auto;
+        width: 90%;
+        padding: 0;
         line-height: 1.5rem;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.1rem;
+    }
+
+    section main .img_right img {
+        display: none;
     }
 
     main .selection_button {
         text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0;
     }
 
     main .selection_button button {
@@ -226,6 +387,7 @@ main > h1 {
         line-height: 1.4rem;
         text-align: center;
         letter-spacing: 0.1em;
+        width: 100%;
     }
 
     .second_main .second_list_options {
@@ -236,11 +398,15 @@ main > h1 {
         margin: 1rem;
         text-align: center;
         align-items: center;
+        margin: 0;
+        width: 100%;
+        height: auto;
     }
 
     .second_main .second_list_options .grid-item {
         width: 100%;
-        height: 100%;
+        height: auto;
+        margin: 0;
         background-color:  rgb(190, 190, 190);
         border-radius: 2rem;
         align-items: center;
