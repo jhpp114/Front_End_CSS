@@ -28,10 +28,12 @@ function addAsListHelper(todo_value) {
     // create complete button
     let completeBtn = document.createElement('button');
     completeBtn.innerHTML = '<i class="far fa-thumbs-up"></i>';
+    completeBtn.classList.add('completed_btn');
     todoListDiv.appendChild(completeBtn);
     // create trash button
     let trashBtn = document.createElement('button');
     trashBtn.innerHTML = '<i class="fas fa-trash"></i>';
+    trashBtn.classList.add('trash_btn');
     todoListDiv.appendChild(trashBtn);
     // append it to ul
     todolist_ul.appendChild(todoListDiv);

@@ -55,8 +55,44 @@ body {
     color: black;
     font-size: 1.5rem;
     justify-content: space-between;
+    align-items: center;
 }
+
 
 .todo_list li {
     flex: 1;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    
+}
+
+.todo_list button {
+    background-color: yellow;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+.todo_list .completed_btn {
+    background-color: green;
+    transition: transform 0.3s ease-in-out;
+}
+
+.todo_list .completed_btn:hover {
+    transform: rotateZ(20deg);
+}
+
+.todo_list .trash_btn {
+    background-color: red;
+    transition:  transform 0.3s ease-in-out;
+}
+
+.todo_list .trash_btn:hover {
+    transform: rotateZ(20deg);
+}
+
+.delete {
+    transform: translateY(30rem) rotateZ(30deg);
+    opacity: 0;
 }
