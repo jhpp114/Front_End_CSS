@@ -5,7 +5,9 @@
 }
 
 body {
-    background: linear-gradient(220deg, #FFDDE2FF , rgb(253, 124, 143));
+    background: linear-gradient(220deg, rgb(255, 221, 226) , rgb(253, 124, 143));
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 .todolist_container {
@@ -17,7 +19,7 @@ body {
 }
 
 .todolist_container .header {
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 2rem;
 }
 
@@ -31,10 +33,26 @@ body {
     cursor: pointer;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
+    border-radius: 1rem;
 }
 
 .todolist_container .todolist_add button:hover {
     background-color: rgb(250, 115, 52);
+}
+
+.todolist_container .selection_filter_container {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.todolist_container .selection_filter_container #todo_filter {
+    width: 80%;
+    height: 3vh;
+    font-size: 1rem;
+    color: rgb(212, 150, 150);
+    border: none;
+    border-radius: 1rem;
+    
 }
 
 .todo_container {
@@ -56,8 +74,8 @@ body {
     font-size: 1.5rem;
     justify-content: space-between;
     align-items: center;
+    transition: all 1.0s ease;
 }
-
 
 .todo_list li {
     flex: 1;
@@ -76,23 +94,34 @@ body {
 
 .todo_list .completed_btn {
     background-color: green;
-    transition: transform 0.3s ease-in-out;
 }
 
-.todo_list .completed_btn:hover {
-    transform: rotateZ(20deg);
-}
+/* .todo_list .completed_btn:hover {
+    transform: rotateZ(10deg);
+} */
 
 .todo_list .trash_btn {
     background-color: red;
-    transition:  transform 0.3s ease-in-out;
 }
 
 .todo_list .trash_btn:hover {
-    transform: rotateZ(20deg);
+    transform: rotateZ(10deg);
+}
+
+.todo_list .fa-trash {
+    pointer-events: none;
+}
+
+.todo_list .fa-thumbs-up {
+    pointer-events: none;
 }
 
 .delete {
     transform: translateY(30rem) rotateZ(30deg);
     opacity: 0;
+}
+
+.completed {
+    opacity: 0.5;
+    text-decoration: line-through;
 }
