@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
-    --basic_font_color: rgb(29, 29, 29);
+    --basic_font_color: rgb(41, 41, 41);
     --button_color: rgb(136, 49, 136);
+    --hamburger_menu_color: rgb(119, 119, 119);
 }
 
 * {
@@ -36,11 +37,18 @@ header
 
 nav {
     flex: 2;
+    width: auto;
 }
 
 ul {
     display: flex;
     justify-content: space-evenly;
+}
+
+/* javascript hamburger menu helper */
+
+.activate_hamburger_menu {
+    transform: translateY(0%) !important;
 }
 
 ul li {
@@ -50,6 +58,19 @@ ul li {
 ul li a {
     text-decoration: none;
     color: var(--basic_font_color);
+}
+
+.hamburger {
+    flex: 1;
+    /* background-color: red; */
+    display: none;
+}
+
+.header_section .hamburger .hamburger_line {
+    width: 20px;
+    background-color: var(--basic_font_color);
+    height: 0.4vh;
+    margin: 0.4rem;
 }
 
 .shopping_cart {
@@ -68,7 +89,7 @@ ul li a {
 .main .main_introduction {
     flex: 1;
     align-items: center;
-    width: 40rem; 
+    /* width: 40rem;  */
     padding-bottom: 10rem;
     margin-top: 10rem;
 }
@@ -121,7 +142,7 @@ ul li a {
     flex: 1;
     animation-name: dropImage;
     animation-duration: 0.6s;
-    /* position: relative; */
+    position: relative;
 }
 
 .main .laptop_image img {
@@ -136,6 +157,8 @@ ul li a {
     justify-content: space-around;
     right: 23%;
 }
+
+
 
 @keyframes dropImage {
     0% {
@@ -165,6 +188,164 @@ ul li a {
 }
 
 @media (max-width: 1300px) {
-    
+    .footer {
+        display: flex;
+        position: absolute;
+        width: 15%;
+        justify-content: space-around;
+        right: 27%;
+    }
 }
 
+@media (max-width: 1035px) {
+    section .main .laptop_image {
+        width: 20%;
+    }
+    
+    .footer {
+        display: flex;
+        position: absolute;
+        width: 15%;
+        justify-content: space-around;
+        right: 22%;
+    }
+}
+
+@media (max-width: 940px) {
+    section .main .laptop_image {
+        width: 20%;
+    }
+    
+    .footer {
+        display: flex;
+        position: absolute;
+        width: 15%;
+        justify-content: space-around;
+        right: 19%;
+    }
+}
+
+@media (max-width: 900px) {
+    section .main .laptop_image {
+        width: 20%;
+    }
+    
+    .footer {
+        display: flex;
+        position: absolute;
+        width: 15%;
+        justify-content: space-around;
+        right: 16%;
+    }
+}
+
+@media (max-width: 850px) {
+    section .main .laptop_image {
+        width: 20%;
+    }
+    
+    .footer {
+        display: flex;
+        position: absolute;
+        width: 15%;
+        justify-content: space-around;
+        right: 10%;
+    }
+}
+
+@media (max-width: 770px) {
+    section .main .laptop_image {
+        width: 20%;
+    }
+    
+    .footer {
+        display: flex;
+        position: absolute;
+        width: 15%;
+        justify-content: space-around;
+        right: 7%;
+    }
+}
+
+@media (max-width: 760px) {
+    body {
+        overflow-x: hidden;
+    }
+    .header_section {
+        width: 80%;
+    }
+
+    .header_section header {
+        flex:3;
+        font-size: 0.7rem;
+    }
+
+    .header_section nav ul {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        text-align: left;
+        transform: translateY(-280%);
+        top: 10vh;
+        left: 10%;
+        background-color: rgb(240, 240, 240);
+        width: 80%;
+        z-index: 1;
+    }
+
+    .header_section nav ul li {
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
+
+    .hamburger {
+        flex: 1;
+        display: block;
+        cursor: pointer;
+        /* background-color: red; */
+    }
+    
+    .header_section .hamburger .hamburger_line {
+        width: 40px;
+        background-color: var(--hamburger_menu_color);
+        height: 0.7vh;
+        margin: 0.4rem;
+        /* background-color: yellow; */
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .main .main_introduction {
+        display: flex;
+        flex-direction: column;
+        padding: 0rem 1rem 0rem 1rem;
+        align-items: center;
+        margin: 2rem 2rem 0rem 2rem;
+        text-align: center;
+    }
+
+    .main .laptop_image img {
+        width: 30rem;
+    }
+
+    .footer {
+        width: 80%;
+        display: relative;
+        justify-content: space-evenly;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .main .laptop_image img {
+        width: 20rem;
+    }
+}
