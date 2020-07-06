@@ -21,7 +21,7 @@ const changeContext = () => {
 };
 
 const apply_changed_context = () => {
-    return new Promise( () => {
+    return new Promise( () => {  
         setInterval(changeContext, 2000);
     });
 };
