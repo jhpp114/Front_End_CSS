@@ -3,111 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Cascasde Style Sheet</title>
+    <title>Welcome to Responsive</title>
     <link rel="stylesheet" href="./app.css">
 </head>
 <body>
-    <h1 class="title">CSS Selectors</h1>
-    <!--  -->
-    <div class="element_selector selectors">
-        <h5>element selector</h5>
-        <hr>
-        <code>
-            Basic Syntax:
-            <br>
-            element_name {
-                <br>   
-                &nbsp;&nbsp; property: value
-                <br>
-            }
-            <br>
-        </code>
-        <code>
-            Now let's apply <br>
-            p {
-                <br>   
-                &nbsp;&nbsp; color: red;
-                <br>
-            }
-            <br>
-        </code>
-        <br>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-            Quas magnam facilis expedita quasi ut quibusdam consequuntur 
-            vel, hic corporis eum maiores enim quidem soluta impedit repudiandae 
-            ipsam! Blanditiis, debitis numquam.
-        </p><br><br>
-        <button class="element_selector_btn">Apply</button>
-    </div>
-    <!-- ID selector -->
-    <div class= "id_selector selectors">
-        <h5>ID Selector</h5>
-        <hr>
-        <code>
-            Basic Syntax:
-            <br>
-            #id {
-                <br>   
-                &nbsp;&nbsp; property: value
-                <br>
-            }
-            <br>
-        </code>
-        <code>
-            Now let's apply <br>
-            #id {
-                <br>   
-                &nbsp;&nbsp; color: blue;
-                <br>
-            }
-            <br>
-        </code>
-        <br>
-        <p>
-            Lorem, 
-            <strong>(id="have_id" ipsum dolor sit amet consectetur)</strong> 
-            adipisicing elit. 
-            Quas magnam facilis expedita quasi ut quibusdam consequuntur 
-            vel, hic corporis eum maiores enim quidem soluta impedit repudiandae 
-            ipsam! Blanditiis, debitis numquam.
-        </p><br><br>
-        <button class="id_selector_btn">Apply</button>
-    </div>
-    <!-- Class Selector -->
-    <div class= "class_selector selectors">
-        <h5>Class Selector</h5>
-        <hr>
-        <code>
-            Basic Syntax:
-            <br>
-            .classname {
-                <br>   
-                &nbsp;&nbsp; property: value
-                <br>
-            }
-            <br>
-        </code>
-        <code>
-            Now let's apply <br>
-            .class_name_for_ul {
-                <br>   
-                &nbsp;&nbsp; list-style: none;
-                <br>
-            }
-            <br>
-        </code>
-        <br>
-        <ul>
-            <li>I have List style</li>
-            <li>I have List style</li>
-            <li>I have List style</li>
-        </ul>
-        <br><br>
-        <button class="class_selector_btn">Apply</button>
-    </div>
-
-    <!-- Script -->
-    <script src="./app.js"></script>
+    <!-- Header section -->
+    <section class="header_section">
+        <header>
+            <img src="./img/logo.svg" alt="">
+            <h3>Three Dots</h3>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Specs</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="shopping_cart">
+            <img src="./img/cart.svg" alt="cart image">
+        </div>
+    </section>
+    <!-- Main Section -->
+    <section class="main">
+        <div class="main_introduction">
+            <h2 class="intro_title">
+                Laptop for the future
+            </h2>
+            <p class="intro_explain">
+                The new 14 inch bezeless display offerring a 4k display with touch screen.
+            </p>
+            <div class="intro_button">
+                <button class="inch_btn">14 inch</button>
+                <button class="cart_btn">Add To Cart</button>
+            </div>
+        </div>
+        <div class="laptop_image">
+            <img src="./img/matebook.png" alt="laptop image">
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <section class="footer">
+        <img src="./img/arrow-left.svg" alt="left-arrow">
+        <img src="./img/dot.svg" alt="empty-dot">
+        <img src="./img/dot.svg" alt="empty-dot">
+        <img src="./img/dot-full.svg" alt="full-dot">
+        <img src="./img/arrow-right.svg" alt="right-arrow">
+    </section>
 </body>
 </html>
