@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.image_slider {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.image_slider .prev_btn  {
+    position: absolute;
+    top: 50%;
+    left: 22.5%;
+    z-index: 2;
+}
+.image_slider .next_btn {
+    position: absolute;
+    top: 50%;
+    right: 22.5%;
+}
+
+    .image_slider .next_btn button
+,   .image_slider .prev_btn button {
+    width: 4rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.image_slider .main_image {
+    background-color: yellow;
+    width: 800px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+/* .image_slider .main_image img {
+    width: 800px;
+    height: 400px;
+    border: 1px solid green;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0px 3px 5px black);
+} */
+
