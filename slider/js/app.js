@@ -34,10 +34,11 @@ const viewPrev_image = () => {
     let image_div = document.querySelector('.main_image');
     const prevBtn = document.querySelector('.prev_btn');
     prevBtn.onclick = () => {
+        index -= 1;
         if (index == 0) {
             index = image_sets.length - 1;
         }
-        --index;
+        
         image_div.style.backgroundImage = `url(${image_sets[index]}.jpg)`;
     }
     
