@@ -109,6 +109,76 @@ class BST {
         }
         this.root = removeNode(this.root, data);
     }
+    // default is node = root node
+    findMinHeight(node = this.root) {
+        if (node == null) {
+            return -1;
+        }
+        let left = this.findMinHeight(node.left);
+        let right =this.findMinHeight(node.right);
+        if (left > right) {
+            return right + 1;
+        } else {
+            return left + 1;
+        }
+    }
+    findMaxHeight(node = this.root) {
+        if (node == null) {
+            return -1;
+        }
+        let left = this.findMaxHeight(node.left);
+        let right = this.findMaxHeight(node.right);
+        if (left > right) {
+            return left + 1;
+        } else {
+            return right + 1;
+        }
+    }
+    isBalanced() {
+        return (this.findMaxHeight() >= this.findMinHeight() - 1);
+    }
+    inOrderTraversal() {
+        if (this.root == null) {
+            return null;
+        } else {
+            var result = new Array();
+            function traverseInorder(node) {
+                node.left && traverseInorder(node.left);
+                result.push(node.data);
+                node.right && traverseInorder(node.right);
+            }
+            traverseInorder(this.root);
+            return result;
+        }
+    }
+    preOrderTraversal() {
+        if (this.root == null) {
+            return null;
+        } else {
+            var result = new Array();
+            function traversalPreorder(node) {
+                result.push(node.data);
+                node.left && traversalPreorder(node.left);
+                node.right && traversalPreorder(node.right);
+            }
+            traversalPreorder(this.root);
+            return result;
+        }
+    }
+    postOrderTraversal() {
+        if (this.root == null) {
+            return null;
+        } else {
+            var result = new Array();
+            function traversalPostorder(node) {
+                node.left && traversalPostorder(node.left);
+                node.right && traversalPostorder(node.right);
+                result.push(ndoe.data);
+            }
+            traversalPostorder(this.root);
+            return result;
+        }
+    }
 }
 
 const bst = new BST();
