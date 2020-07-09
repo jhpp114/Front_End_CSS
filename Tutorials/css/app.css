@@ -1,7 +1,12 @@
+/* google font import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 /* Root for color setting */
 :root {
     --menu_font_color: rgb(75, 75, 75);
     --menu_back_ground_color: rgb(248, 248, 248);
+    --main_section_font_color: rgb(230, 230, 230);
+    --aqua_color: rgb(186, 243, 243);
 }
 
 /* Root End */
@@ -9,6 +14,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Global CSS */
@@ -50,7 +59,7 @@ li {
 }
 
 .nav_section .header a:hover {
-    color: rgb(57, 167, 167);
+    color: var(--aqua_color);
 }
 
 .nav_section .nav_links {
@@ -66,7 +75,7 @@ li {
 }
 
 .nav_section .nav_links li:hover {
-    background-color: aqua;
+    background-color: var(--aqua_color);
 }
 
 .external_links {
@@ -80,7 +89,7 @@ li {
 }
 
 .external_links a:hover {
-    background-color: aqua;
+    background-color: var(--aqua_color);
 }
 
     /* hamburger load nav_links */
@@ -91,6 +100,44 @@ li {
 /* Navigation End */
 /* =============================================== */
 /* Main Section Start */
+.main_section {
+    background-image: url(../assets/Background-image.png);
+    height: 110vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.main_section .main_intro {
+    color: var(--main_section_font_color);
+    margin: 10rem 0;
+    text-align: center;
+}
+
+.main_section .main_intro h3 
+,   .main_section .main_intro h2 
+{
+    padding: 1rem 0rem;
+}
+
+.main_section .main_intro h2 {
+    font-size: 2rem;
+}
+
+.main_section .main_intro .main_intro_btn {
+    background-color: var(--aqua_color);
+    cursor: pointer;
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    border: none;
+}
+
+.main_section .main_intro .main_intro_btn:hover {
+    background-color: transparent;
+    border: 1px solid var(--main_section_font_color);
+    color: var(--main_section_font_color);
+}
 
 
 
@@ -133,7 +180,8 @@ li {
         position: absolute;
         width: 100%;
         top: -1500%;
-        left: 0
+        left: 0;
+        background-color: var(--menu_back_ground_color);
     }
 
     .nav_section .nav_links li {
