@@ -18,6 +18,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    /* overflow-x: hidden; */
 }
 
 /* Global CSS */
@@ -29,11 +30,21 @@ a {
 li {
     list-style: none;
 }
+
+button {
+    background-color: var(--aqua_color);
+    cursor: pointer;
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    border: none;
+}
+
 /* Global End */
 
 /* Navigation Start */
 .nav_section {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -98,14 +109,19 @@ li {
 }
     /* End hamburger load nav_links */
 /* Navigation End */
+
 /* =============================================== */
+
 /* Main Section Start */
 .main_section {
     background-image: url(../assets/Background-image.png);
-    height: 110vh;
-    background-repeat: no-repeat;
+    height: 75vh;
+    width: 90%;
+    background-repeat:no-repeat;
+    background-position: center;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .main_section .main_intro {
@@ -124,34 +140,57 @@ li {
     font-size: 2rem;
 }
 
-.main_section .main_intro .main_intro_btn {
-    background-color: var(--aqua_color);
-    cursor: pointer;
-    width: 8rem;
-    height: 2.5rem;
-    border-radius: 2rem;
-    border: none;
-}
-
 .main_section .main_intro .main_intro_btn:hover {
     background-color: transparent;
     border: 1px solid var(--main_section_font_color);
     color: var(--main_section_font_color);
 }
 
-
-
-
 /* End Main Section  */
+
 /* =============================================== */
 
+/* Main Information Section */
+.main_info_container {
+    width: 90%;
+    background-image: url('../assets/Abract01.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    height: 50vh;
+}
 
+.main_info_container .main_info {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5rem auto;
+}
 
+.main_info_container .main_info .main_info_blog {
+    flex: 1;
+    text-align: center;
+}
+
+.main_info_container .main_info .main_info_blog h3 {
+    height: 4rem;
+}
+
+.main_info .main_info_blog .blog_btn_container .blog_btn:hover {
+    background-color: transparent;
+    border: 1px solid var(--main_section_font_color);
+    color: black;
+    font-weight: bold;
+}
+
+.main_info_container .main_info .main_info_blog .blog_btn_container span {
+    margin: 1rem 0;
+    display: block;
+}
 
 /* Query Selector Width 750px */
 @media (max-width: 750px) {
     body {
-        overflow: hidden;
+        /* overflow: hidden; */
         overflow-y: hidden;
     }
 /* Navigation Start */
