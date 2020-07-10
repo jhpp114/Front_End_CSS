@@ -6,8 +6,9 @@ const prevBtn = document.querySelector('.main_arrow .prevBtn');
 const nextBtn = document.querySelector('.main_arrow .nextBtn');
 const lists_blog_divs = document.querySelectorAll('.main_info_blog');
 // move up
-const scrollUpBtn = document.querySelector('.scroll_up i');
-console.log(scrollUpBtn);
+const scroll_btn = document.querySelector('.scroll_up i');
+console.log(scroll_btn);
+
 function allBlogObjects() {
     let postBlogs = [
         {
@@ -84,11 +85,18 @@ function placeImages() {
     }
 }
 
-
-
 function displayBurgerMenu() {
     nav_link.classList.toggle('display_nav_links');
 }
+
+
+scroll_btn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0
+    ,   left: 0
+    ,   behavior: "smooth"
+    });
+});
 
 burger_menu.addEventListener('click', displayBurgerMenu);
 nextBtn.addEventListener('click', placeImages);

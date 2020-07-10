@@ -459,6 +459,13 @@ button {
     cursor: pointer;
 }
 
+.scroll_up i:hover {
+    background-color: rgb(221, 221, 221);
+    border-radius: 2rem;
+    border: none;
+    color: black;
+}
+
 /* End Scroll Arrow */
 
 /* Query Selector Width 750px */
