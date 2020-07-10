@@ -449,9 +449,8 @@ button {
 /* Scroll Arrow Start*/
 .scroll_up {
     position: absolute;
-    /* color: white; */
-    right: 5rem;
-    bottom: 15rem;
+    right: 5%;
+    bottom: 50%;
 }
 
 .scroll_up i {
@@ -468,8 +467,20 @@ button {
 /* End Scroll Arrow */
 
 /* Media Query Width 1307 */
-@media (max-width: 1307px) {
+@media (max-width: 930px) {
+    .main_info2_container > .main_info2_post > .info2_post >.main_post_img .post_user_info {
+        background-image: red;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        padding: 0.5rem;
+    }
 
+    .main_info2_container > .main_info2_post > .info2_post >.main_post_img .post_user_info span {
+        padding: 0rem 1rem;
+    }
+
+    
 }
 
 
