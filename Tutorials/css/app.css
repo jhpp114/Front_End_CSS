@@ -161,7 +161,7 @@ button {
     background-position: right;
     background-repeat: no-repeat;
     margin: 0 auto;
-    height: 0;
+    height: 100%;
     min-height: 50vh;
 }
 
@@ -465,10 +465,15 @@ button {
     border: none;
     color: black;
 }
-
 /* End Scroll Arrow */
 
-/* Query Selector Width 750px */
+/* Media Query Width 1307 */
+@media (max-width: 1307px) {
+
+}
+
+
+/* Media Query Width 750px */
 @media (max-width: 750px) {
 /* Navigation Start */
     .nav_section {
