@@ -5,7 +5,9 @@ const nav_link = document.querySelector('.nav_section .nav_links');
 const prevBtn = document.querySelector('.main_arrow .prevBtn');
 const nextBtn = document.querySelector('.main_arrow .nextBtn');
 const lists_blog_divs = document.querySelectorAll('.main_info_blog');
-
+// move up
+const scrollUpBtn = document.querySelector('.scroll_up i');
+console.log(scrollUpBtn);
 function allBlogObjects() {
     let postBlogs = [
         {
