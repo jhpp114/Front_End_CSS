@@ -178,6 +178,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     margin: 1rem auto;
+    justify-content: center;
 }
 
 .main_info_container .main_info .main_info_blog {
@@ -623,7 +624,108 @@ button {
     .nav_section .nav_links li {
         padding: 1rem;
     }
-/* End Navigation */
+    /* End Navigation */
 
-    
+    /* Main info2 Conatiner Start */
+    .main_info2_container {
+        width: 90%;
+        grid-template-columns: 100%;
+    }
+
+    .main_info2_container > .main_info2_post > .info2_post > .main_post_img > .post_user_info {
+        font-size: 1rem;
+        text-align: center;
+    }
+    /* End Main info2 Container Start */
+
+    /* Side Post Start */
+    .side_post > .category > h2 {
+        margin-top: 2rem;
+    }
+
+    .side_post > .category > .category_list > ul > li {
+        font-size: 1rem;
+    }
+
+    .side_post > .popular_post > .category_list > .post_user_info {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0rem;
+    }
+
+    .side_post > .popular_post > .category_list > .post_user_info > span {
+        padding: 0rem 0.5rem;
+    }
+
+    .side_post > .popular_post > .category_list > .main_post_title {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    .side_post > .news_letter_section {
+        text-align: center;
+    }
+
+    .side_post > .news_letter_section > .news_leter_input input[type="text"] {
+        width:80%;
+    }
+
+    .side_post > .news_letter_section > .news_letter_input button {
+        display: inline-block;
+        width: 20%;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    /* End Side Post */
+
+    /* Scroll Arrow Start */
+    .scroll_up {
+        right: 5%;
+        bottom: 10%;
+    }
+    /* End Scroll Arrow */
 }
+
+@media (max-width: 525px) {
+    /* Main Section Start */
+    .main_section {
+        width: 100%;
+    }
+    .main_section > .main_intro > h2 {
+        font-size: 1.5rem;
+    }
+    /* End Main Section */
+
+    /* Main info2_container Start */
+    .main_info2_container > .main_info2_post > .info2_post > .main_post_img > .post_user_info {
+        font-size: 0.8rem;
+        padding: 0.2rem;
+    }
+
+    .main_info2_container > .main_info2_post > .info2_post > .main_post_img > .post_user_info span {
+        padding: 0rem 0.3rem;
+    }
+
+    .main_info2_container > .main_info2_post > .pagination {
+        font-size: 0.7rem;
+    }
+    /* End Main info2_container */
+
+    /* Side Post Start */
+    .side_post > .category > .category_list ul {
+        padding: 0.2rem;
+    }
+
+    .side_post > .category > .category_list ul li {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+
+    .side_post > .popular_post > .category_list > .main_post_title h3 {
+        font-size: 1.2rem;
+    }
+    /* End Side Post */
+}
+
+
