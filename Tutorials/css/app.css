@@ -687,6 +687,7 @@ button {
     /* End Scroll Arrow */
 }
 
+/* Media Query View 525px */
 @media (max-width: 525px) {
     /* Main Section Start */
     .main_section {
@@ -728,4 +729,19 @@ button {
     /* End Side Post */
 }
 
+/* Media Query view width 470px */
+@media (max-width: 470px) {
+    /* Navigation Start */
+    .nav_section > .external_links i {
+        font-size: 0.7rem;
+    }
 
+    /* End Navigation */
+
+    /* Footer Start */
+    .footer_class > .footer_container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* End Footer */
+}
