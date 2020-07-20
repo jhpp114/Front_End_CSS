@@ -1,0 +1,68 @@
+:root {
+    --base_color: rgb(115, 115, 219);
+    --btn_font_color: rgb(212, 212, 212);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ========= Title ========== */
+section > header {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+section > header > h2 {
+    text-transform: uppercase;
+}
+
+section > header > h2 > i {
+    margin-right: 0.5rem;
+    color:var(--base_color);
+}
+
+section > header > h2 > span {
+    color: var(--base_color);
+    letter-spacing: 0.5rem;
+}
+/* ======= End Title ======== */
+/* ======== Main Start ====== */
+section > form > .input_container {
+    width: 50%;
+    margin: 0 auto;
+    background-color: beige;
+    text-align: center;
+}
+
+section > form > .input_container > .group_form {
+    text-align: left;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    margin-left: 25%;
+}
+
+section > form > .input_container > .group_form label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+section > form > .input_container > .group_form input {
+    width: 70%;
+    height: 2rem;
+}
+
+section > form > .input_container > .group_form > .submit_btn {
+    background-color: var(--base_color);
+    border: none;
+    font-weight: bold;
+    color: var(--btn_font_color);
+}
+
+.input_container {
+    width: 50%;
+    margin: 0 auto;
+}

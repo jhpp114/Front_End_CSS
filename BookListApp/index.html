@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookList</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- Bootstrap CDN (just for table) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Title -->
+    <section>
+        <header>
+            <h2>
+                <i class="fas fa-book"></i>
+                My <span>Book</span> List
+            </h2>
+        </header>
+    </section>
+    <!-- End Title -->
+    <!-- Input -->
+    <section>
+        <form id="book-form">
+            <main class="input_container">
+                <div class="group_form">
+                    <label class="input_label" for="title">Title</label><br>
+                    <input type="text" id="title">
+                </div>
+                <div class="group_form">
+                    <label class="input_label" for="author">Author</label><br>
+                    <input type="text" id="author">
+                </div>
+                <div class="group_form">
+                    <label class="input_label" for="isbn">ISBN#</label><br>
+                    <input type="text" id="isbn">
+                </div>
+                <div class="group_form">
+                    <input class="submit_btn" type="submit" value="Add Book">
+                </div>
+            </main>
+        </form>
+        <div class="input_container mt-5">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN#</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="book-list">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <!-- script -->
+    <script src="./js/app.js"></script>
+</body>
+</html>
