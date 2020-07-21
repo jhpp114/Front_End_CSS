@@ -6,3 +6,5 @@ Study of CSS
 
 # CSS First Responsive (cssIntroduction)
 ![](cssIntroduction/css_responsive_1.gif)
+
+# CSS Second Responsive (Tutorials)
