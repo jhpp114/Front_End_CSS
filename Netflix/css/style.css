@@ -4,6 +4,7 @@
     --logo_btn_color: rgb(231, 36, 36);
     --logo_font_color: rgb(223, 223, 223);
     --content_seperator: rgb(163, 163, 163);
+    --background_color: rgb(19, 19, 19);
 }
 
 * {
@@ -14,7 +15,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: black;
+    background-color: var(--background_color);
 }
 /* ==================================== */
 /* ============Logo With Top============ */
@@ -23,14 +24,26 @@ body {
     background-image: url('../images/background.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 70vh;
+    min-height: 80vh;
+    position: relative;
     filter: drop-shadow(12px 12px 12px rgb(105, 105, 105));
+}
+
+.top_main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 0 0 0.8);
+    box-shadow: inset 100px 100px 100px 60px black;
+    z-index: 1;
 }
 
 section > header {
     display: flex;
     justify-content: space-between;
-    /* margin: 2rem 5rem; */
 }
 
 section > header > img {
@@ -46,6 +59,7 @@ section > header > .signin {
     text-align: center;
     padding: 0.2rem;
     margin: 2rem 5rem;
+    z-index: 2;
 }
 
 section > header > .signin a {
@@ -63,12 +77,13 @@ section > header > .signin a {
 /* ==================================== */
 
 .top_main > .sub_main {
-    /* background-color: blue; */
+    position: relative;
     margin: 6rem auto;
     text-align: center;
+    z-index: 2;
 }
 
-.top_main > .sub_main h1 {
+.top_main > .sub_main > h1 {
     color: var(--logo_font_color);
     font-size: 3.5rem;
 }
@@ -115,18 +130,19 @@ section > .content1_hr {
 
 section > .content1_main {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 70%;
+    margin: 1rem auto;
 }
 
 section > .content1_main > .left_content1 {
     color: var(--logo_font_color);
     flex: 1;
-    margin: 9rem 7rem;
+    padding: 7rem 0rem;
 }
 
 section > .content1_main > .left_content1 h3 {
     font-size: 3rem;
-    margin-bottom: 1rem;
 }
 
 section > .content1_main > .left_content1 p {
@@ -136,8 +152,104 @@ section > .content1_main > .left_content1 p {
 
 section > .content1_main > .right_content1 {
     flex:1;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 section > .content1_main > .right_content1 img {
-    width: 480px;
+    width: 380px;
+}
+/* End content1 */
+
+/* Content 2 */
+section > .content1_main > .left_content2 {
+    flex: 1;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+section > .content1_main > .left_content2 img {
+    width: 380px;
+}
+
+section > .content1_main > .right_content2 {
+    color: var(--logo_font_color);
+    flex: 1;
+    padding: 7rem 0rem;
+}
+
+section > .content1_main > .right_content2 h3 {
+    font-size: 3rem;
+}
+
+section > .content1_main > .right_content2 p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/* End Content 2 */
+/* Content 3 */
+section > .content1_main > .left_content3 {
+    flex: 1;
+    color: var(--logo_font_color);
+    padding: 7rem 0rem;
+}
+
+section > .content1_main > .left_content3 h3 {
+    font-size: 3rem;
+}
+
+section > .content1_main > .left_content3 p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+section > .content1_main > .right_content3 {
+    flex: 1;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+section > .content1_main > .right_content3 img {
+    width: 380px;
+}
+/* End Content3 */
+
+/* FAQ Start */
+section > .content_faq {
+    width: 50%;
+    margin: 3rem auto;
+}
+
+section > .content_faq > h3 {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--logo_font_color);
+    margin-bottom: 3rem;
+}
+
+section > .content_faq > .faq_list ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section > .content_faq > .faq_list ul li {
+    list-style: none;
+    margin: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    color: var(--logo_font_color);
+    background-color: rgb(61, 61, 61);
+    cursor: pointer;
+    text-align: justify;
+    /* text-align-last: right; */
+}
+
+section > .content_faq > .faq_list i {
+    display: inline;
+    background-color: red;
 }
