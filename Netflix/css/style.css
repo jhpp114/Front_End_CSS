@@ -278,6 +278,11 @@ section > .content_faq > .faq_list > ul > .toggle_item {
     display: none;
 }
 
+.toggle_data {
+    display: block !important;
+}
+
+
 /* FAQ input field */
 section > .content_faq > .input_field {
     margin: 3rem auto;
