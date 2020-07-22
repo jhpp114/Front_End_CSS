@@ -280,7 +280,6 @@ section > .content_faq > .faq_list > ul > .toggle_item {
 
 /* FAQ input field */
 section > .content_faq > .input_field {
-    /* background-color: red; */
     margin: 3rem auto;
     width: 100%;
 }
@@ -298,7 +297,6 @@ section > .content_faq > .input_field > #email_submit_faq_field > .form_group in
 }
 
 section > .content_faq > .input_field > #email_submit_faq_field > .form_group >  span > button {
-    background-color: red;
     width: auto;
     height: 4rem;
     font-size: 1.5rem;
@@ -319,14 +317,60 @@ section > .content_faq > .last_Statement_in_faq > p {
 
 /* Footer Start */
 footer {
-    background-color: red;
     color: var(--logo_font_color);
     width: 80%;
-    height: 30vh;
-    margin: 2rem auto;
-    padding: 3rem 15rem;
+    height: 35vh;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    padding: 2rem 15rem;
 }
 
+footer > .footer_question {
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
 
+footer > .footer_question > p > .phone_number:hover {
+    text-decoration: underline;
+}
+
+footer > .footer_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > .footer_content > .footer_content1 {
+    display: flex;
+    flex-direction: column;
+}
+
+footer > .footer_content > .footer_content1 > span {
+    margin: 0.4rem 0rem;
+}
+
+footer > .footer_content > .footer_content1  > span > a {
+    text-decoration: none;
+    color: var(--logo_font_color);
+    font-size: 0.8rem;
+}
+
+footer > .footer_content > .footer_content1 > span > a:hover {
+    text-decoration: underline;
+}
+
+footer > .footer_language_btn {
+    margin-top: 1rem;
+    border: 1px solid var(--logo_font_color);
+    width: 16%;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer > .footer_language_btn > .globe_icon {
+    margin-right: 0.5rem;
+}
 /* End Footer */
+
 
