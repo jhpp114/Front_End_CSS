@@ -4,7 +4,7 @@
     --logo_btn_color: rgb(231, 36, 36);
     --logo_font_color: rgb(223, 223, 223);
     --content_seperator: rgb(163, 163, 163);
-    --background_color: rgb(19, 19, 19);
+    --background_color: rgb(12, 12, 12);
     --faq_background_color: rgb(61, 61, 61);
 }
 
@@ -97,16 +97,18 @@ section > header > .signin a {
 }
 
 .top_main > .sub_main > #email_submit > .form_group {
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
 }
 
 .top_main > .sub_main > #email_submit > .form_group > input[type="text"] {
     width: 40%;
-    height: 5rem;
+    height: 3rem;
 }
 /* Get back later */
 .top_main > .sub_main > #email_submit > .form_group > span > .email_btn {
-    height: 5rem;
+    height: 3rem;
     color: var(--logo_font_color);
     background-color: red;
     width: auto;
@@ -273,5 +275,58 @@ section > .content_faq > .faq_list > ul > .toggle_item {
     padding-right: 1rem;
     background-color: var(--faq_background_color);
     color: var(--logo_font_color);
-    /* display: none; */
+    display: none;
 }
+
+/* FAQ input field */
+section > .content_faq > .input_field {
+    /* background-color: red; */
+    margin: 3rem auto;
+    width: 100%;
+}
+
+section > .content_faq > .input_field > #email_submit_faq_field > .form_group {
+    display: flex;
+    justify-content: center;
+    margin: 0rem auto;
+    
+}
+
+section > .content_faq > .input_field > #email_submit_faq_field > .form_group input[type="text"] {
+    width: 72%;
+    height: 4rem;
+}
+
+section > .content_faq > .input_field > #email_submit_faq_field > .form_group >  span > button {
+    background-color: red;
+    width: auto;
+    height: 4rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    color: var(--logo_font_color);
+}
+
+section > .content_faq > .last_Statement_in_faq {
+    margin-top: 3rem auto;
+}
+
+section > .content_faq > .last_Statement_in_faq > p {
+    color: var(--logo_font_color);
+    text-align: center;
+}
+
+/* Footer Start */
+footer {
+    background-color: red;
+    color: var(--logo_font_color);
+    width: 80%;
+    height: 30vh;
+    margin: 2rem auto;
+    padding: 3rem 15rem;
+}
+
+
+/* End Footer */
+
