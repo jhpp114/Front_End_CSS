@@ -165,27 +165,35 @@ section > .content1_main > .right_content1 img {
 /* End content1 */
 
 /* Content 2 */
-section > .content1_main > .left_content2 {
+
+section > .content2_main {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: 1rem auto;
+}
+
+section > .content2_main > .left_content2 {
     flex: 1;
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
 
-section > .content1_main > .left_content2 img {
+section > .content2_main > .left_content2 img {
     width: 380px;
 }
 
-section > .content1_main > .right_content2 {
+section > .content2_main > .right_content2 {
     color: var(--logo_font_color);
     flex: 1;
     padding: 7rem 0rem;
 }
 
-section > .content1_main > .right_content2 h3 {
+section > .content2_main > .right_content2 h3 {
     font-size: 3rem;
 }
 
-section > .content1_main > .right_content2 p {
+section > .content2_main > .right_content2 p {
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -293,7 +301,6 @@ section > .content_faq > .input_field > #email_submit_faq_field > .form_group {
     display: flex;
     justify-content: center;
     margin: 0rem auto;
-    
 }
 
 section > .content_faq > .input_field > #email_submit_faq_field > .form_group input[type="text"] {
@@ -309,6 +316,7 @@ section > .content_faq > .input_field > #email_submit_faq_field > .form_group > 
     border: none;
     cursor: pointer;
     color: var(--logo_font_color);
+    background-color: red;
 }
 
 section > .content_faq > .last_Statement_in_faq {
@@ -323,7 +331,7 @@ section > .content_faq > .last_Statement_in_faq > p {
 /* Footer Start */
 footer {
     color: var(--logo_font_color);
-    width: 80%;
+    /* width: 80%; */
     height: 35vh;
     margin-top: 2rem;
     margin-left: auto;
@@ -368,7 +376,7 @@ footer > .footer_content > .footer_content1 > span > a:hover {
 footer > .footer_language_btn {
     margin-top: 1rem;
     border: 1px solid var(--logo_font_color);
-    width: 16%;
+    width: 20%;
     padding: 1rem;
     text-align: center;
 }
@@ -378,4 +386,158 @@ footer > .footer_language_btn > .globe_icon {
 }
 /* End Footer */
 
+/* Media Query */
+/* Width 1494px */
+@media (max-width: 1494px) {
+    section > .content_faq > .input_field > #email_submit_faq_field > .form_group {
+        display: flex;
+        justify-content: center;
+    }
+    section > .content_faq > .input_field > #email_submit_faq_field > .form_group input[type="text"] {
+        flex: 2;
+    }
+    section > .content_faq > .input_field > #email_submit_faq_field > .form_group span button {
+        flex: 1;
+    }
+}
 
+/* Width 1160px */
+@media (max-width: 1160px) {
+    footer > .footer_language_btn {
+        margin-top: 1rem;
+        border: 1px solid var(--logo_font_color);
+        width: 25%;
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1020px) {
+    section > .content_faq {
+        width: 80%;
+        background-color: red;
+    }
+
+    footer {
+        padding: 2rem 10rem;
+    }
+}
+
+@media (max-width: 950px) {
+    section > .content1_main {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    section > .content1_main > .left_content1 {
+        padding: 0;
+        text-align: center;
+    }
+
+    section > .content1_main > .left_content1 h3 {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    section > .content1_main > .left_content1 p {
+        font-size: 1rem;
+    }
+
+    section > .content1_main > .right_content1 {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    section > .content1_main > .right_content1 img {
+        text-align: center;
+        width: 480px;
+    }
+
+    /* Content 2 */
+    section > .content2_main {
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    section > .content2_main  > .left_content2 {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    section > .content2_main > .left_content2 img {
+        text-align: center;
+        width: 480px;
+    }
+
+    section > .content2_main > .right_content2 {
+        padding: 0;
+        text-align: center;
+    }
+    
+    section > .content2_main > .right_content2 h3 {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    section > .content2_main > .right_content2 p {
+        font-size: 1rem;
+    }
+    /* End Content2 */
+
+    /* Content 3 */
+    section > .content1_main > .left_content3 {
+        padding: 0;
+        text-align: center;
+    }
+
+    section > .content1_main > .left_content3 h3 {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    section > .content1_main > .left_content3 p {
+        font-size: 1rem;
+    }
+
+    section > .content1_main > .right_content3 {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    section > .content1_main > .right_content3 img {
+        text-align: center;
+        width: 480px;
+    }
+
+    /* End Content3 */
+    .top_main > .sub_main > #email_submit > .form_group {
+        display: inline-block;
+        width: 60%;
+    }
+
+    .top_main > .sub_main > #email_submit > .form_group > input[type="text"] {
+        width: 100%;
+        margin: 1rem;
+    }
+    
+    section > .content_faq > .input_field > #email_submit_faq_field > .form_group {
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    section > .content_faq > .input_field > #email_submit_faq_field > .form_group input[type="text"] {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    section > .content_faq > .input_field > #email_submit_faq_field > .form_group >  span > button {
+        margin-left: 25%;
+        height: 3rem;
+    }
+
+    footer {
+        padding: 2rem 5rem;
+    }
+}
