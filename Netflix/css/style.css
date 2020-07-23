@@ -691,7 +691,6 @@ footer > .footer_language_btn > .globe_icon {
     }
 
     section > .content_faq > .faq_list > ul > li {
-        background-color: red;
         padding-left: 1rem;
         font-size: 1rem;
     }
@@ -705,5 +704,8 @@ footer > .footer_language_btn > .globe_icon {
         font-size: 1.5rem;
     }
 
-    
+    footer > .footer_language_btn {
+        width: 35%;
+        padding: 0.5rem;
+    }
 }
