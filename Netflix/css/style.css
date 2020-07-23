@@ -415,7 +415,6 @@ footer > .footer_language_btn > .globe_icon {
 @media (max-width: 1020px) {
     section > .content_faq {
         width: 80%;
-        background-color: red;
     }
 
     footer {
@@ -539,5 +538,87 @@ footer > .footer_language_btn > .globe_icon {
 
     footer {
         padding: 2rem 5rem;
+    }
+}
+
+@media (max-width: 705px) {
+    footer {
+        padding: 2rem 2rem;
+    }
+
+    footer > .footer_language_btn {
+        width: 27%;
+    }
+}
+
+@media (max-width: 650px) {
+    section > header > img {
+        width: 120px;
+        margin: 2rem;
+    } 
+
+    section > header > .signin {
+        margin: 2rem;
+        height: 1.5rem;
+        width: 5rem;
+    }
+
+    section > header > .signin a {
+        font-size: 1rem;
+    }
+
+    .top_main::after {
+        box-shadow: inset 30px 30px 30px black;
+    }
+
+    .top_main > .sub_main {
+        margin: 3rem 0rem;
+    }
+
+    .top_main > .sub_main > h1 {
+        font-size: 2.5rem;
+    }
+
+    .top_main > .sub_main > #email_submit > .form_group > input[type="text"] {
+        width: 100%;
+    }
+
+    section > .content_faq > .input_field {
+        width: 80%;
+    }
+}
+
+@media (max-width: 620px) {
+    section > 
+    
+    
+    section > .content_faq {
+        width: 100%;
+    }
+    
+    footer {
+        padding: 1rem 1rem;
+    }
+    
+    footer > .footer_language_btn {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 530px) {
+    footer > .footer_question {
+        text-align: center;
+    }
+
+    footer > .footer_content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+        margin: 0rem 2rem;
+    }
+
+    footer > .footer_language_btn {
+        text-align: center;
+        margin: 2rem;
     }
 }
