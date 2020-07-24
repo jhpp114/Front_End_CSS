@@ -13,14 +13,14 @@ const option_things_to_read = document.querySelector('.option_things_to_read');
 junior_naver.addEventListener("mouseover", apply_color_change);
 junior_naver.addEventListener("mouseout", remove_color_change);
 document.addEventListener('DOMContentLoaded', change_headline_everyTwoSec);
-
 option_to_read_active();
+
 function option_to_read_active() {
     let options = option_things_to_read.children;
     for (let i = 0; i < options.length; i++) {
         options[i].addEventListener("click", function() {
             // remove active
-            
+            removeClass();
             // apply active
             options[i].classList.add(`active_${i}`);
         });
@@ -29,7 +29,12 @@ function option_to_read_active() {
 
 function removeClass() {
     let options = option_things_to_read.children;
-    
+    for (let i = 0; i < options.length; i++) {
+        if (options[i].classList.contains(`active_${i}`)) {
+            options[i].classList.remove(`active_${i}`);
+            console.log(options[i]);
+        }
+    }
 }
 
 // functions
@@ -56,8 +61,6 @@ function change_headline_everyTwoSec() {
             i = 0;
         }
     }, 2000);
-  
-    
 }
 
 function apply_color_change() {

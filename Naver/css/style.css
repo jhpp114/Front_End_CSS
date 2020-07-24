@@ -8,6 +8,7 @@
     --news_highlights_color: rgb(230, 228, 228);
     --news_font_color: rgb(51, 51, 255);
     --media_grid_line: rgb(216, 216, 216);
+    --entertain_font_color: #E784BA;
 }
 
 * {
@@ -398,6 +399,8 @@ section > .main_option > .filter_more > p > i {
     grid-template-columns: repeat(8, 1fr);
     align-items: center;
     text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
 }
 
 .main_section > .main_content > .option_things_to_read div {
@@ -441,9 +444,6 @@ section > .main_option > .filter_more > p > i {
     color: #003366;
 }
 
-/* option_thigns_to_read active */
-/* Enter: #E784BA */
-/* color: white; */
 .active_0 {
     background-color: #E784BA;
     color: white;
@@ -483,3 +483,73 @@ section > .main_option > .filter_more > p > i {
     background-color: #003366;
     color: white;
 }
+
+.main_section > .main_content > .option_things_to_read > .fa-chevron-circle-left {
+    position: absolute;
+    top: 25%;
+    left: -2%;
+    font-size: 2.0rem;
+    cursor: pointer;
+}
+
+.main_section > .main_content > .option_things_to_read > .fa-chevron-circle-right {
+    position: absolute;
+    top: 25%;
+    right: -2%;
+    font-size: 2.0rem;
+    cursor: pointer;
+}
+
+/* ===================================== */
+/* =====END Option_things_to_read======*/
+/* ===================================== */
+
+/* ===================================== */
+/* ======= Start Main Content ===========*/
+/* ===================================== */
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > img {
+    margin-right: 1rem;
+    width: 200px;
+}
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span {
+   margin-right: 2rem; 
+}
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > p {
+    margin: 0.2rem;
+}
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > .content_filter_entertain {
+    color: var(--entertain_font_color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > .content_title {
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > .content_story {
+    color: var(--gray_font_color);
+}
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > .content_writer {
+    font-size: 0.8rem;
+    color: var(--gray_font_color);
+}
+
