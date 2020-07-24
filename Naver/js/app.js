@@ -6,13 +6,33 @@ const apply_green = document.querySelector('.apply_green');
 const naver_color = document.querySelector('.naver_color');
 // ========= main content elements====================
 const highlight_news = document.querySelector('.dynamic_news');
-
+// ========== option_things_to_read===================
+const option_things_to_read = document.querySelector('.option_things_to_read');
 
 // Event listeners
 junior_naver.addEventListener("mouseover", apply_color_change);
 junior_naver.addEventListener("mouseout", remove_color_change);
 document.addEventListener('DOMContentLoaded', change_headline_everyTwoSec);
 
+option_to_read_active();
+function option_to_read_active() {
+    let options = option_things_to_read.children;
+    for (let i = 0; i < options.length; i++) {
+        options[i].addEventListener("click", function() {
+            // remove active
+            
+            // apply active
+            options[i].classList.add(`active_${i}`);
+        });
+    }
+}
+
+function removeClass() {
+    let options = option_things_to_read.children;
+    
+}
+
+// functions
 function random_news_line() {
     const newsLineArr = [
     ,   "Choco-Nyang O-Ta-Ku"
@@ -40,8 +60,6 @@ function change_headline_everyTwoSec() {
     
 }
 
-
-// functions
 function apply_color_change() {
     apply_blue.style.color = "blue";
     apply_red.style.color = "red";

@@ -80,11 +80,13 @@ section > .first_side > .happy_bean:hover {
 
 section > .main_logo {
     margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 30% 70%;
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: 30% 70%; */
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    width: 65%;
+    width: 100%;
 }
 
 section > .main_logo > img {
@@ -96,6 +98,7 @@ section > .main_logo > #main_search_bar {
     margin-left: 2rem;
     position: relative;
     margin-left: 0;
+    width: 60%;
 }
 
 section > .main_logo > #main_search_bar > input[type=text] {
@@ -399,12 +402,13 @@ section > .main_option > .filter_more > p > i {
 
 .main_section > .main_content > .option_things_to_read div {
     border: 0.5px solid var(--media_grid_line);
-    padding: 1.2rem;
+    padding: 1.0rem;
     font-weight: bold;
     cursor: pointer;
 }
 
 .main_section > .main_content > .option_things_to_read div a {
+    font-size: 0.8rem;
     text-decoration: none;
     color: black;
 }
@@ -440,7 +444,42 @@ section > .main_option > .filter_more > p > i {
 /* option_thigns_to_read active */
 /* Enter: #E784BA */
 /* color: white; */
+.active_0 {
+    background-color: #E784BA;
+    color: white;
+}
 
+.active_1 {
+    background-color: blue;
+    color: white;
+}
 
+.active_2 {
+    background-color: var(--news_font_color);
+    color: white;
+}
 
+.active_3 {
+    background-color: var(--main_logo_color);
+    color: white;
+}
 
+.active_4 {
+    background-color: var(--main_logo_color);
+    color: white;
+}
+
+.active_5 {
+    background-color: #ffb347;
+    color: white;
+}
+
+.active_6 {
+    background-color: var(--news_font_color);
+    color: white;
+}
+
+.active_7 {
+    background-color: #003366;
+    color: white;
+}
