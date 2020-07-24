@@ -225,6 +225,7 @@ section > .main_option > .filter_more > p > i {
 
 .main_section > .main_content > .news_highlights {
     display: flex;
+    justify-content: space-between;
     background-color: var(--news_highlights_color);
     width: 100%;
     height: 3rem;
@@ -233,31 +234,84 @@ section > .main_option > .filter_more > p > i {
     box-shadow: inset 2px 2px 2px rgb(216, 216, 216);
 }
 
-.main_section > .main_content > .news_highlights > .main_news {
+.main_section > .main_content > .news_highlights > .news_hl_left > .main_news {
     flex: 1;
     font-weight: bold;
 }
 
-.main_section > .main_content > .news_highlights > p > .dynamic_news {
+.main_section > .main_content > .news_highlights > .news_hl_left > p > .dynamic_news {
     margin-left: 0.5rem;
     color: var(--gray_font_color);
     
 }
 
-.main_section > .main_content > .news_highlights > .news_highlights_side_news {
+.main_section > .main_content > .news_highlights > .news_hl_right > .news_highlights_side_news {
     flex: 1;
     color: var(--news_font_color);
     font-weight: bold;
     cursor: pointer;
 }
 
-.main_section > .main_content > .news_highlights > .news_highlights_side_news > span {
+.main_section > .main_content > .news_highlights > .news_hl_right > .news_highlights_side_news > span {
     font-size: 1rem;
     align-items: center;
     margin: 0rem 1rem;
     color: var(--gray_font_color);
     cursor: pointer;
 }
+/* ========================================== */
+/* ============End News HighLight============ */
+/* ========================================== */
 
+/* ========================================== */
+/* =============News Media Stand============= */
+/* ========================================== */
+.main_section > .main_content > .news_stand {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
+.main_section > .main_content > .news_stand > .news_stand_media {
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+}
 
+.main_section > .main_content > .news_stand > .news_stand_media > .fa-newspaper {
+    color: var(--news_font_color);
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+.main_section > .main_content > .news_stand > .news_stand_media p {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.main_section > .main_content > .news_stand > .news_stand_media > .fa-chevron-right {
+    margin-right: 0.3rem;
+}
+
+.main_section > .main_content > .news_stand > .news_stand_media > .media_gray {
+    color: var(--gray_font_color);
+    margin-right: 0.4rem;
+}
+
+.main_section > .main_content > .news_stand > .news_stand_view_options {
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+}
+
+.main_section > .main_content > .news_stand > .news_stand_view_options > i {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.main_section > .main_content > .news_stand > .news_stand_view_options > .fa-th-large {
+    color: var(--news_font_color);
+}
