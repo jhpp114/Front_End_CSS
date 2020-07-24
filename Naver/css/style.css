@@ -1,0 +1,119 @@
+:root {
+    --main_logo_color: #2DB400;
+    --font_color: rgb(61, 61, 61);
+    --gray_font_color: rgb(153, 153, 153);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 70%;
+    margin: 0.2rem auto;
+}
+
+section > .first_side {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+section > .first_side > p {
+    font-size: 1.1rem;
+    color: var(--font_color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+section > .first_side > p:hover {
+    text-decoration-line: underline;
+}
+
+section > .first_side > p > i {
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    color: white;
+    box-shadow: 1px 2.5px 1.5px 1.5px rgb(129, 129, 129);
+    background-color: rgb(114, 114, 114);
+    border-radius: 1rem;
+}
+
+section > .first_side > span { 
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+section > .first_side > .junior_naver {
+    color: var(--gray_font_color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+section > .first_side > .happy_bean {
+    color: var(--gray_font_color);
+    font-weight: bold;
+}
+
+section > .first_side > .happy_bean:hover {
+    color: var(--main_logo_color);
+}
+
+section > .main_logo {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    text-align: center;
+}
+
+section > .main_logo > img {
+    width: 280px;
+}
+
+section > .main_logo > #main_search_bar {
+    margin-left: 2rem;
+    position: relative;
+}
+
+section > .main_logo > #main_search_bar > input[type=text] {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1.5rem;
+    border: 2px solid var(--main_logo_color);
+}
+
+section > .main_logo > #main_search_bar > i {
+    margin: 0.5rem;
+    font-size: 2rem;
+    position: absolute;
+}
+
+section > .main_logo > #main_search_bar > .fa-keyboard {
+    top: 30%;
+    right: 15%;
+    color: var(--gray_font_color);
+}
+
+section > .main_logo > #main_search_bar > .fa-caret-down {
+    top: 30%;
+    right: 10%;
+    color: var(--main_logo_color);
+}
+
+section > .main_logo > #main_search_bar > div {
+    position: absolute;
+    background-color: var(--main_logo_color);
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    color: white;
+    top: 20%;
+    right: 0;
+}
+section > .main_logo > #main_search_bar > div > .fa-search {
+    margin-top: 25%;
+}
+
