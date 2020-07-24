@@ -1,11 +1,47 @@
+// Elements
 const junior_naver = document.querySelector('.junior_naver');
 const apply_blue = document.querySelector('.apply_blue');
 const apply_red = document.querySelector('.apply_red');
 const apply_green = document.querySelector('.apply_green');
 const naver_color = document.querySelector('.naver_color');
+// ========= main content elements====================
+const highlight_news = document.querySelector('.dynamic_news');
+
+
+// Event listeners
 junior_naver.addEventListener("mouseover", apply_color_change);
 junior_naver.addEventListener("mouseout", remove_color_change);
+document.addEventListener('DOMContentLoaded', change_headline_everyTwoSec);
 
+function random_news_line() {
+    const newsLineArr = [
+    ,   "Choco-Nyang O-Ta-Ku"
+    ,   "Subscriber reached 19!"
+    ,   "6 weeks learning code...."
+    ,   "[LIVE] UDT forces training"
+    ,   "ROK and US military go together"
+    ,   "Self Learner can do it!"
+    ,   "[Hope] I finally got a job...."
+    ];
+    return newsLineArr;
+}
+
+function change_headline_everyTwoSec() {
+    let newsData = random_news_line();
+    let i = 0;
+    setInterval(function() {
+        highlight_news.textContent = newsData[i];
+        i++;
+        if (i >= newsData.length - 1) {
+            i = 0;
+        }
+    }, 2000);
+  
+    
+}
+
+
+// functions
 function apply_color_change() {
     apply_blue.style.color = "blue";
     apply_red.style.color = "red";
@@ -19,3 +55,4 @@ function remove_color_change() {
     apply_green.style.color = "rgb(153, 153, 153)";
     naver_color.style.color = "rgb(153, 153, 153)";
 }
+

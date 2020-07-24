@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap');
+
 :root {
     --main_logo_color: #2DB400;
     --font_color: rgb(61, 61, 61);
-    --gray_font_color: rgb(153, 153, 153);
+    --gray_font_color: rgb(122, 122, 122);
+    --line_divider_color: rgb(182, 182, 182);
+    --news_highlights_color: rgb(230, 228, 228);
+    --news_font_color: rgb(51, 51, 255);
 }
 
 * {
@@ -11,14 +16,25 @@
 }
 
 body {
-    width: 70%;
-    margin: 0.2rem auto;
+    font-family: 'Montserrat', sans-serif;
 }
 
+/* ========================== */
+/* Naver Search Bar with Logo */
+
+/* Todo: Reduce the search bar size */
+
+/* ========================== */
+/* .first_section {
+    width: 100%;
+    margin-left: 10%;
+} */
 section > .first_side {
     display: flex;
     justify-content: flex-end;
     margin-top: 1rem;
+    width: 80%;
+    margin: 2rem auto;
 }
 
 section > .first_side > p {
@@ -64,18 +80,21 @@ section > .first_side > .happy_bean:hover {
 section > .main_logo {
     margin-top: 1rem;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 30% 70%;
     align-items: center;
     text-align: center;
+    width: 65%;
 }
 
 section > .main_logo > img {
     width: 280px;
+    cursor: pointer;
 }
 
 section > .main_logo > #main_search_bar {
     margin-left: 2rem;
     position: relative;
+    margin-left: 0;
 }
 
 section > .main_logo > #main_search_bar > input[type=text] {
@@ -95,12 +114,14 @@ section > .main_logo > #main_search_bar > .fa-keyboard {
     top: 30%;
     right: 15%;
     color: var(--gray_font_color);
+    cursor: pointer;
 }
 
 section > .main_logo > #main_search_bar > .fa-caret-down {
     top: 30%;
     right: 10%;
     color: var(--main_logo_color);
+    cursor: pointer;
 }
 
 section > .main_logo > #main_search_bar > div {
@@ -115,5 +136,128 @@ section > .main_logo > #main_search_bar > div {
 }
 section > .main_logo > #main_search_bar > div > .fa-search {
     margin-top: 25%;
+    cursor: pointer;
 }
+/* ========================== */
+/* End Naver Search Bar with Logo */
+/* ========================== */
+
+.section_divider {
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    background-color: var(--line_divider_color);
+}
+
+/* ========================== */
+/* Line Options Start */
+/* ========================== */
+section {
+    width: 85%;
+    margin: 0.2rem auto;
+}
+
+section > .main_option {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+section > .main_option > .option_green {
+    color: var(--main_logo_color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+section > .main_option > .option_black {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+section > .main_option > .option_more {
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+}
+
+section > .main_option > .option_more > p > i {
+    color: var(--gray_font_color);
+}
+
+section > .main_option > .filter_more {
+    cursor: pointer;
+}
+
+section > .main_option > .filter_more > p > i {
+    color: var(--gray_font_color);
+    margin-left: 0.3rem;
+    margin-right: 0.1rem;
+}
+
+/* ========================== */
+/* End Line Options Start */
+/* ========================== */
+
+.section_divider_bottom {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--line_divider_color);
+}
+
+/* ========================== */
+/* Main Content Start */
+/* ========================== */
+
+.main_section {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.main_section > .main_content > .covid_banner img {
+    width: 100%;
+}
+
+.main_section > .main_content > .news_highlights {
+    display: flex;
+    background-color: var(--news_highlights_color);
+    width: 100%;
+    height: 3rem;
+    margin: 0.5rem auto;
+    padding: 1rem;
+    box-shadow: inset 2px 2px 2px rgb(216, 216, 216);
+}
+
+.main_section > .main_content > .news_highlights > .main_news {
+    flex: 1;
+    font-weight: bold;
+}
+
+.main_section > .main_content > .news_highlights > p > .dynamic_news {
+    margin-left: 0.5rem;
+    color: var(--gray_font_color);
+    
+}
+
+.main_section > .main_content > .news_highlights > .news_highlights_side_news {
+    flex: 1;
+    color: var(--news_font_color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main_section > .main_content > .news_highlights > .news_highlights_side_news > span {
+    font-size: 1rem;
+    align-items: center;
+    margin: 0rem 1rem;
+    color: var(--gray_font_color);
+    cursor: pointer;
+}
+
+
 
