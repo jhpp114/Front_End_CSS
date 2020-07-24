@@ -349,3 +349,98 @@ section > .main_option > .filter_more > p > i {
     cursor: pointer;
 }
 
+.main_section > .main_content > .basic_thing_to_read {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0rem;
+}
+
+.main_section > .main_content > .basic_thing_to_read > .things_to_read_left  p {
+    font-weight: bold;
+    font-size: 1.1rem;
+}   
+
+.main_section > .main_content > .basic_thing_to_read > .things_to_read_left p > span {
+    font-weight: normal;
+}
+
+.main_section > .main_content > .basic_thing_to_read > .things_to_read_right {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main_section > .main_content > .basic_thing_to_read > .things_to_read_right p {
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.main_section > .main_content > .basic_thing_to_read > .things_to_read_right p > .gray_font
+, .main_section > .main_content > .basic_thing_to_read > .things_to_read_right > span
+, .main_section > .main_content > .basic_thing_to_read > .things_to_read_right > .favorite_filter
+{
+    color: var(--gray_font_color);
+    margin-right: 0.5rem;
+}
+/* ===================================== */
+/* =====End Basic Things to Read======== */
+/* ===================================== */
+
+/* ===================================== */
+/* =====Start Option_things_to_read======*/
+/* ===================================== */
+.main_section > .main_content > .option_things_to_read {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    text-align: center;
+}
+
+.main_section > .main_content > .option_things_to_read div {
+    border: 0.5px solid var(--media_grid_line);
+    padding: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main_section > .main_content > .option_things_to_read div a {
+    text-decoration: none;
+    color: black;
+}
+
+.main_section > .main_content > .option_things_to_read > .read_entertain a:hover {
+    color: #E784BA;
+}
+
+.main_section > .main_content > .option_things_to_read > .read_sport a:hover {
+    color: blue;
+}
+
+.main_section > .main_content > .option_things_to_read > .read_vehicle a:hover 
+, .main_section > .main_content > .option_things_to_read > .read_game a:hover
+{
+    color: var(--news_font_color);
+}
+
+.main_section > .main_content > .option_things_to_read > .read_webtoon a:hover
+,    .main_section > .main_content > .option_things_to_read > .read_economics a:hover
+{
+    color: var(--main_logo_color);
+}
+
+.main_section > .main_content > .option_things_to_read > .read_food a:hover {
+    color: #ffb347;
+}
+
+.main_section > .main_content > .option_things_to_read > .read_movie a:hover {
+    color: #003366;
+}
+
+/* option_thigns_to_read active */
+/* Enter: #E784BA */
+/* color: white; */
+
+
+
+
