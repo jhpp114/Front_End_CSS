@@ -8,12 +8,28 @@ const naver_color = document.querySelector('.naver_color');
 const highlight_news = document.querySelector('.dynamic_news');
 // ========== option_things_to_read===================
 const option_things_to_read = document.querySelector('.option_things_to_read');
+// =========== vedio elements ========================
+const videos = document.querySelectorAll(".video");
+console.log(videos);
 
 // Event listeners
 junior_naver.addEventListener("mouseover", apply_color_change);
 junior_naver.addEventListener("mouseout", remove_color_change);
 document.addEventListener('DOMContentLoaded', change_headline_everyTwoSec);
 option_to_read_active();
+auto_play_video();
+
+function auto_play_video() {
+    videos.forEach(function(video) {
+        video.addEventListener('mouseover', ()=> {
+            console.log("play?");
+            video.play();
+        });
+        video.addEventListener('mouseout', ()=> {
+            video.pause();
+        });
+    });
+}
 
 function option_to_read_active() {
     let options = option_things_to_read.children;

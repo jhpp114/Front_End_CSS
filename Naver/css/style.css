@@ -211,7 +211,7 @@ section > .main_option > .filter_more > p > i {
 .section_divider_bottom {
     width: 100%;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     background-color: var(--line_divider_color);
 }
 
@@ -622,3 +622,61 @@ section > .main_option > .filter_more > p > i {
 /* ================= */
 /* End Book Section  */
 /* ================= */
+
+/* ========================= */
+/* Start Extra Book Section  */
+/* ========================= */
+.main_section > .main_content > .book_content_extra_container > .book_contents_extra > .book_content_extra {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.main_section > .main_content > .book_content_extra_container > .book_contents_extra > .book_content_extra > a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.main_section > .main_content > .book_content_extra_container > .book_contents_extra > .book_content_extra > a > img {
+    margin-right: 1rem;
+    width: 200px;
+}
+
+.main_section > .main_content > .book_content_extra_container > .book_contents_extra > .book_content_extra > a > .right_book_extra_content > .book_extra_category {
+    color: var(--main_logo_color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.main_section > .main_content > .book_content_extra_container > .book_contents_extra > .book_content_extra > a > .right_book_extra_content > .book_extra_title {
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.main_section > .main_content > .book_content_extra_container > .book_contents_extra > .book_content_extra > a > .right_book_extra_content > .book_info {
+    color: var(--gray_font_color);
+    margin-bottom: 0.2rem;
+}
+
+.main_section > .main_content > .book_content_extra_container > .book_contents_extra > .book_content_extra > a > .right_book_extra_content > span > .content_writer {
+    color: var(--gray_font_color);
+    font-size: 0.8rem;
+}
+/* ========================= */
+/* End Extra Book Section  */
+/* ========================= */
+
+/* ========================= */
+/* == Start Video Section == */
+/* ========================= */
+.main_section > .main_content > .video_contents_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_section > .main_content > .video_contents_container > .video_container  > .video {
+    width: 260px;
+    margin-bottom: 1rem;
+}
