@@ -553,3 +553,27 @@ section > .main_option > .filter_more > p > i {
     color: var(--gray_font_color);
 }
 
+/* ================== */
+/* Book Section Start */
+/* ================== */
+.main_section > .main_content > .book_contents > .book_section_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+} 
+
+.main_section > .main_content > .book_contents > .book_section_header > .left_book_header > .book_section_title > .book_stat_date 
+, .main_section > .main_content > .book_contents > .book_section_header > .right_book_header p
+{
+    color: var(--gray_font_color);
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+
+
+/* ================= */
+/* End Book Section  */
+/* ================= */

@@ -60,7 +60,7 @@ function change_headline_everyTwoSec() {
         if (i >= newsData.length - 1) {
             i = 0;
         }
-    }, 2000);
+    }, 2000); 
 }
 
 function apply_color_change() {
