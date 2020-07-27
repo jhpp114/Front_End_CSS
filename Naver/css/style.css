@@ -739,7 +739,7 @@ section > .main_option > .filter_more > p > i {
 /* ========================================= */
 
 /* ========================================= */
-/* == Start Currency Information == */
+/* == Start Weather Information == */
 /* ========================================= */
 .main_section > .side_content > .info_weather_container {
     width: 100%;
@@ -752,13 +752,64 @@ section > .main_option > .filter_more > p > i {
     /* justify-content: space-between; */
 }
 
-.main_section > .side_content > .info_weather_container > .weather_title {
-    
+/* ========================================= */
+/* == End Weather Information == */
+/* ========================================= */
+
+/* ========================================= */
+/* == Start advertisement Information == */
+/* ========================================= */
+.main_section > .side_content > .advertisement_field {
+    width: 100%;
+    background: linear-gradient(250deg, rgba(255,0,0,.8), rgba(255,0,0,0));
+    height: 14rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.main_section > .side_content > .advertisement_field > p {
+    padding: 20%;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+}
+/* ========================================= */
+/* == End advertisement Information == */
+/* ========================================= */
+
+/* ========================================= */
+/* == Start Shopping Category == */
+/* ========================================= */
+.main_section > .side_content > .shopping_options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.main_section > .side_content > .shopping_options > .shopping_main_option > p {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.main_section > .side_content > .shopping_options > .shopping_main_categories > .shopping_category_opt {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main_section > .side_content > .shopping_options > .shopping_main_categories > .shopping_category_opt p {
+    margin-right: 0.8rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.main_section > .side_content > .shopping_options > .shopping_main_categories > .shopping_category_opt p:hover {
+    color: var(--main_logo_color);
+    text-decoration: underline;
 }
 
 
-
-
 /* ========================================= */
-/* == End Currency Information == */
+/* == End Shopping Information == */
 /* ========================================= */
+

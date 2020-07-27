@@ -93,4 +93,3 @@ function remove_color_change() {
     apply_green.style.color = "rgb(153, 153, 153)";
     naver_color.style.color = "rgb(153, 153, 153)";
 }
-
