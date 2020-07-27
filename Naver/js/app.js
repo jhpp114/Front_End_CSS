@@ -10,7 +10,8 @@ const highlight_news = document.querySelector('.dynamic_news');
 const option_things_to_read = document.querySelector('.option_things_to_read');
 // =========== vedio elements ========================
 const videos = document.querySelectorAll(".video");
-console.log(videos);
+// =========== currency data =========================
+
 
 // Event listeners
 junior_naver.addEventListener("mouseover", apply_color_change);
