@@ -9,6 +9,7 @@
     --news_font_color: rgb(51, 51, 255);
     --media_grid_line: rgb(216, 216, 216);
     --entertain_font_color: #E784BA;
+    --signin_background_color: rgb(246, 246, 246);
 }
 
 * {
@@ -221,11 +222,12 @@ section > .main_option > .filter_more > p > i {
 
 .main_section {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 65% 35%;
 }
 
 .main_section > .main_content > .covid_banner img {
     width: 100%;
+    height: 10rem;
 }
 
 .main_section > .main_content > .news_highlights {
@@ -680,3 +682,56 @@ section > .main_option > .filter_more > p > i {
     width: 260px;
     margin-bottom: 1rem;
 }
+/* ========================= */
+/* == End Video Section == */
+/* ========================= */
+
+/* ========================================= */
+/* == Start Right Content Sign_in Section == */
+/* ========================================= */
+
+.main_section > .side_content {
+    margin-left: 2.5rem;
+}
+
+.main_section > .side_content > .right_content_signin {
+    background-color: var(--signin_background_color);
+    width: 100%;
+    height: 10rem;
+    padding: 1rem;
+}
+
+.main_section > .side_content > .right_content_signin > span > p {
+    font-size: 0.9rem;
+}
+
+.main_section > .side_content > .right_content_signin > span > .naver_signin {
+    background-color: var(--main_logo_color);
+    margin-top: 1rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.main_section > .side_content > .right_content_signin > span > .naver_signin h2 {
+    color: white;
+    font-weight: bold;
+}
+
+.main_section > .side_content > .right_content_signin > span > .naver_signin > h2 > .small_signin {
+    font-size: 0.9rem;
+}
+
+.main_section > .side_content > .right_content_signin > span > .signin_helper {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_section > .side_content > .right_content_signin > span > .signin_helper > span > i {
+    color: var(--gray_font_color);
+}
+/* ========================================= */
+/* == End Right Content Sign_in Section == */
+/* ========================================= */
