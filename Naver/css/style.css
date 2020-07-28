@@ -816,10 +816,11 @@ section > .main_option > .filter_more > p > i {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     border-bottom: 1px solid var(--media_grid_line);
+    padding: 0.5rem;
 }
 
 .main_section > .side_content > .shopping_section_container > .shopping_places > span {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin-top: 0.1rem;
     color: var(--font_color);
     cursor: pointer;
@@ -829,6 +830,62 @@ section > .main_option > .filter_more > p > i {
     color: rgb(29, 29, 29);
     text-decoration: underline;
 }
+
+.main_section > .side_content > .shopping_section_container > .shopping_header {
+    margin: 1rem 1rem;
+    position: relative;
+}
+
+.main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative; */
+}
+
+.main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_header_container > h4 {
+    color: var(--main_logo_color);
+}
+
+.main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_header_container > h4 > .shopping_others {
+    color: var(--font_color);
+}
+
+.main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_header_container > div > span {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_header_container > div > span > p {
+    letter-spacing: 0.1rem;
+    margin-right: 0.2rem;
+}
+
+.main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_header_container > div > span > .fa-chevron-left 
+, .main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_header_container > div > span > .fa-chevron-right
+{
+    /* background-color: red; */
+    padding: 0.8rem;
+    border: 0.5px solid var(--media_grid_line);
+    color: var(--font_color);
+}
+
+.main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_view_more {
+    top: -50%;
+    left: 0;
+    position: absolute;
+    border: 1px solid var(--main_logo_color);
+    border-radius: 0.5rem;
+} 
+
+.main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_view_more > p {
+    padding: 0.3rem;
+    color: var(--main_logo_color);
+    font-weight: bold;
+}
+
+
 /* ========================================= */
 /* == End Shopping Information == */
 /* ========================================= */
