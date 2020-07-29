@@ -1015,12 +1015,27 @@ section > .main_option > .filter_more > p > i {
 /* ============================================= */
 /* =======Stock Information Start=============== */
 /* ============================================= */
+.side_stock_container {
+    height: 15rem;
+}
+
 .side_stock_container > h4 {
     color: var(--main_logo_color);
-    margin: 0.5rem 0rem;
+    margin: 0.5rem 0rem 1.5rem 0rem;
     font-size: 1.2rem;
 }
 
+.side_stock_container > .side_stock_content > .stock_name_img {
+    height: 2rem;
+}
+
+.side_stock_container > .side_stock_content > .stock_information {
+    height: 10rem;
+}
+
+.side_stock_container > .side_stock_content > .stock_information > p {
+    margin-bottom: 0.5rem;
+}
 .stock_name_img {
     display: flex;
     justify-content: center;
