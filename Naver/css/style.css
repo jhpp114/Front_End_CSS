@@ -1015,11 +1015,17 @@ section > .main_option > .filter_more > p > i {
 /* ============================================= */
 /* =======Stock Information Start=============== */
 /* ============================================= */
+.side_stock_container > h4 {
+    color: var(--main_logo_color);
+    margin: 0.5rem 0rem;
+    font-size: 1.2rem;
+}
+
 .stock_name_img {
-    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1rem;
 }
 .stock_name_img p {
     font-weight: bold;
