@@ -81,14 +81,21 @@ section > .first_side > .happy_bean:hover {
 }
 
 section > .main_logo {
-    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
-    /* grid-template-columns: 30% 70%; */
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    width: 85%;
+}
+
+.search_bar_behavior {
+    position: fixed;
+    top: 0;
+    z-index: 1;
     width: 100%;
+    background-color: white;
+    padding-bottom: 1rem;
 }
 
 section > .main_logo > img {
@@ -855,7 +862,6 @@ section > .main_option > .filter_more > p > i {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: relative; */
 }
 
 .main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_header_container > h4 {
@@ -884,6 +890,11 @@ section > .main_option > .filter_more > p > i {
     padding: 0.8rem;
     border: 0.5px solid var(--media_grid_line);
     color: var(--font_color);
+}
+
+.main_section > .side_content > .shopping_section_container > .shopping_header  > .shopping_heading_items {
+    background-color: red;
+    
 }
 
 .main_section > .side_content > .shopping_section_container > .shopping_header  > .shopping_heading_items > .shopping_item_cont{
@@ -976,11 +987,31 @@ section > .main_option > .filter_more > p > i {
 }
 
 .main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_heading_items > .welcome_shopping_container > .welcome_shopping_main_contents {
-    background-color: red;
 }
 
+.main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_heading_items > .welcome_shopping_container > .welcome_shopping_main_contents > .welcome_lists {
+    list-style: none;
+}
 
+.main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_heading_items > .welcome_shopping_container > .welcome_shopping_main_contents > .welcome_lists > li {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
 
+.main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_heading_items > .welcome_shopping_container > .welcome_shopping_main_contents > .welcome_lists > li:before {
+    content: "\2022";
+    color: var(--main_logo_color);
+    font-weight: bold;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block; 
+}
+
+.main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_heading_items > .welcome_shopping_container > .welcome_shopping_main_contents > .welcome_lists > li > .welcome_main_info {
+    margin-left: 1rem;
+    color: var(--font_color);
+    font-weight: normal;
+}
 /* ========================================= */
 /* == End Shopping Information == */
 /* ========================================= */

@@ -10,8 +10,20 @@ const highlight_news = document.querySelector('.dynamic_news');
 const option_things_to_read = document.querySelector('.option_things_to_read');
 // =========== vedio elements ========================
 const videos = document.querySelectorAll(".video");
-// =========== currency data =========================
 
+
+
+// =========== Window Scroll =========================
+const naver_search_bar = document.querySelector('.main_logo');
+window.onscroll = function(e) {
+    console.log(window.scrollY);
+    let scrollY_pixel = window.scrollY;
+    if (scrollY_pixel >= 500) {
+        naver_search_bar.classList.add('search_bar_behavior');
+    }  else {
+        naver_search_bar.classList.remove('search_bar_behavior');
+    }
+}
 
 // Event listeners
 junior_naver.addEventListener("mouseover", apply_color_change);
