@@ -36,7 +36,7 @@ function generate_weather_data() {
             let icon = data.weather[0].icon;
             let icon_link = `http://openweathermap.org/img/wn/${icon}@2x.png`;
             weather_icon.innerHTML = `<img src="${icon_link}" width="80px">`;
-            console.log(icon);
+            //console.log(icon);
             weather_data.textContent = `City: ${city_name} - Weather: ${description}`;
         });
         if (index < cities.length - 1) {

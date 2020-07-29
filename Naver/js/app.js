@@ -15,14 +15,18 @@ const videos = document.querySelectorAll(".video");
 
 // =========== Window Scroll =========================
 const naver_search_bar = document.querySelector('.main_logo');
+const shopping_items = document.querySelector('.shopping_heading_items');
 window.onscroll = function(e) {
-    console.log(window.scrollY);
+    //console.log(window.scrollY);
     let scrollY_pixel = window.scrollY;
     if (scrollY_pixel >= 500) {
         naver_search_bar.classList.add('search_bar_behavior');
-    }  else {
+        
+    } else {
         naver_search_bar.classList.remove('search_bar_behavior');
+        
     }
+
 }
 
 // Event listeners

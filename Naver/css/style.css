@@ -893,7 +893,6 @@ section > .main_option > .filter_more > p > i {
 }
 
 .main_section > .side_content > .shopping_section_container > .shopping_header  > .shopping_heading_items {
-    background-color: red;
     
 }
 
@@ -1011,6 +1010,20 @@ section > .main_option > .filter_more > p > i {
     margin-left: 1rem;
     color: var(--font_color);
     font-weight: normal;
+}
+
+/* ============================================= */
+/* =======Stock Information Start=============== */
+/* ============================================= */
+.stock_name_img {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stock_name_img p {
+    font-weight: bold;
+    letter-spacing: 0.2rem;
 }
 /* ========================================= */
 /* == End Shopping Information == */
