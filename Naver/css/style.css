@@ -1077,11 +1077,14 @@ section > .main_option > .filter_more > p > i {
     width: 160px;
     height: 200px;
 }
-
+/* ============ */
+/* Footer Start */
+/* ============ */
 .footer {
     min-height: 20rem;
     width: 85%;
-    margin: 1rem auto;
+    margin: 2rem auto;
+    position: relative;
 }
 
 .footer > hr {
@@ -1096,7 +1099,6 @@ section > .main_option > .filter_more > p > i {
 }
 
 .footer > .footer_mains > .footer_main {
-    background-color: red;
     width: 33%;
     display: flex;
     justify-content: flex-start;
@@ -1108,7 +1110,90 @@ section > .main_option > .filter_more > p > i {
 }
 
 .footer > .footer_mains > .footer_main > .footer_main_info {
-    background-color: blue;
+    margin-left: 1rem;
+    width: 10rem;
 }
 
+.footer_main_title {
+    color: var(--main_logo_color);
+    margin-bottom: 1rem;
+}
 
+.footer > .footer_sub {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer > .footer_sub > p {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.footer > .explanation > .explanation_main_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer > .explanation > .explanation_main_container > .explanation_creater > h4 {
+    margin-bottom: 0.7rem;
+    color: var(--main_logo_color);
+}
+
+.explanation_info {
+    color: var(--gray_font_color);
+}
+
+.explanation_info > a {
+    text-decoration: none;
+    color: var(--gray_font_color);
+}
+
+.explanation > .explanation_main_container > .explanation_creator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.explanation > .explanation_main_container > .explanation_creator > p {
+    margin: 3rem;
+}
+
+.explanation > .explanation_main_container > .explanation_creator > p > a{
+    text-decoration: none;
+    color: var(--gray_font_color);
+}
+
+.explanation > .explanation_main_container > .explanation_creator > p > i {
+    font-size: 2rem;
+}
+
+.footer > .extra_buttons {
+    position: absolute;
+    bottom: -5%;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer > .extra_buttons > div {
+    width: 12rem;
+    margin: 1rem;
+    height: 2.5rem;
+    cursor: pointer;
+    border: 1px solid var(--media_grid_line);
+    padding: 0.5rem;
+    border-radius: 2rem;
+    align-items: center;
+}
+
+.footer > .extra_buttons > div > i {
+    font-size: 1.5rem;
+    color: var(--gray_font_color);
+}
+/* ============ */
+/* End Footer */
+/* ============ */
