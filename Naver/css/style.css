@@ -1070,5 +1070,10 @@ section > .main_option > .filter_more > p > i {
 
 .side_movie_container > .new_movies {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.side_movie_container > .new_movies img {
+    width: 160px;
+    height: 200px;
 }
