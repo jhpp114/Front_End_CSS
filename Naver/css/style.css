@@ -1080,5 +1080,11 @@ section > .main_option > .filter_more > p > i {
 
 .footer {
     min-height: 20rem;
-    background-color: red;
+    width: 85%;
+    margin: 1rem auto;
 }
+
+.footer > hr {
+    color: var(--media_grid_line);
+}
+
