@@ -1017,6 +1017,7 @@ section > .main_option > .filter_more > p > i {
 /* ============================================= */
 .side_stock_container {
     height: 15rem;
+    margin-bottom: 1rem;
 }
 
 .side_stock_container > h4 {
@@ -1050,3 +1051,24 @@ section > .main_option > .filter_more > p > i {
 /* == End Shopping Information == */
 /* ========================================= */
 
+/* ========================================= */
+/* =============== Movie =================== */
+/* ========================================= */
+.section_movie_divider {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.side_movie_container > .side_movie_title {
+    color: var(--main_logo_color);
+    margin-bottom: 1.0rem;
+}
+
+.side_movie_container > .side_movie_updated_date {
+    margin: 1rem 0rem;
+}
+
+.side_movie_container > .new_movies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

@@ -35,7 +35,7 @@ async function generate_stock_data() {
                 .then(response => response.json())
             ]);
             let data = await responses;
-            console.log(data);
+            //console.log(data);
             let company_name = data[0].name;
             let company_logo = data[0].logo;
             let company_ticker = data[0].ticker;
