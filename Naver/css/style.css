@@ -1077,3 +1077,8 @@ section > .main_option > .filter_more > p > i {
     width: 160px;
     height: 200px;
 }
+
+.footer {
+    min-height: 20rem;
+    background-color: red;
+}
