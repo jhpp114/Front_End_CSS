@@ -1086,5 +1086,29 @@ section > .main_option > .filter_more > p > i {
 
 .footer > hr {
     color: var(--media_grid_line);
+    margin: 1rem 0rem;
 }
+
+.footer > .footer_mains {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer > .footer_mains > .footer_main {
+    background-color: red;
+    width: 33%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer > .footer_mains > .footer_main > img {
+    width: 180px;
+}
+
+.footer > .footer_mains > .footer_main > .footer_main_info {
+    background-color: blue;
+}
+
 
