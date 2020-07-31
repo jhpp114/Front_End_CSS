@@ -30,12 +30,9 @@ html[data-theme="dark"] {
     --search_behvior_background_color: rgb(27, 27, 27);
 }
 
-
 /* ========================================== */
 /* =========== End Dark Mode CSS ============ */
 /* ========================================== */
-
-
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -908,7 +905,8 @@ section > .main_option > .filter_more > p > i {
 
 .main_section > .side_content > .shopping_section_container > .shopping_header  > .shopping_heading_items > .shopping_item_cont{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
     margin-top: 0.5rem;
 }
 
@@ -1228,3 +1226,33 @@ section > .main_option > .filter_more > p > i {
 /* ============ */
 /* End Footer */
 /* ============ */
+
+/* ============== Media Query ============== */
+@media (max-width: 1600px) {
+    /* Shopping Section */
+    .main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_header_container > h4 {
+        font-size: 0.8rem;
+    }
+
+    .main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_header_container > div > span > p {
+        letter-spacing: 0.1rem;
+        margin-right: 0.2rem;
+        font-size: 0.8rem;
+    }
+
+    .main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_header_container > div > span > .fa-chevron-left 
+    , .main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_header_container > div > span > .fa-chevron-right
+    {
+        /* background-color: red; */
+        padding: 0.2rem;
+        border: 0.5px solid var(--media_grid_line);
+        color: var(--font_color);
+
+    }
+
+    .main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_heading_items > .shopping_item_cont > .shopping_item > img {
+        width: 120px;
+    } 
+    
+    /* End Shopping Section */
+}
