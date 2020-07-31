@@ -10,8 +10,9 @@ const highlight_news = document.querySelector('.dynamic_news');
 const option_things_to_read = document.querySelector('.option_things_to_read');
 // =========== vedio elements ========================
 const videos = document.querySelectorAll(".video");
-
-
+// =========== extra btn elements ====================
+const SCROLL_UP_BTN = document.querySelector(".scroll_up");
+const MODE_SETTING = document.querySelector(".mode_setting");
 
 // =========== Window Scroll =========================
 const naver_search_bar = document.querySelector('.main_logo');
@@ -33,6 +34,26 @@ junior_naver.addEventListener("mouseout", remove_color_change);
 document.addEventListener('DOMContentLoaded', change_headline_everyTwoSec);
 option_to_read_active();
 auto_play_video();
+SCROLL_UP_BTN.addEventListener("click", scroll_to_top);
+MODE_SETTING.addEventListener("click", change_theme);
+
+// Functions
+function change_theme() {
+    let currentMode = document.documentElement.getAttribute("data-theme");
+    if (currentMode == "dark") {
+        document.documentElement.setAttribute("data-theme", "light");        
+    } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+    }
+}
+
+function scroll_to_top() {
+    window.scrollTo({
+        top: 0
+    ,   left: 0
+    ,   behavior: "smooth"
+    });
+}
 
 function auto_play_video() {
     videos.forEach(function(video) {

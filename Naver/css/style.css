@@ -18,6 +18,11 @@
     box-sizing: border-box;
 }
 
+html[data-theme="dark"] {
+    background-color: #333333;
+    color: rgb(231, 231, 231);
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -1191,6 +1196,12 @@ section > .main_option > .filter_more > p > i {
     box-shadow: 2px 1px 1px 1px var(--gray_font_color);
 }
 
+.footer > .extra_buttons > .scroll_up:hover {
+    background-color: var(--main_logo_color);
+
+}
+
+
 .footer > .extra_buttons > div > i {
     font-size: 1.0rem;
     color: var(--gray_font_color);
@@ -1206,6 +1217,7 @@ section > .main_option > .filter_more > p > i {
     font-weight: bold;
     color: var(--gray_font_color);
 }
+
 /* ============ */
 /* End Footer */
 /* ============ */
