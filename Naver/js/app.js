@@ -13,6 +13,7 @@ const videos = document.querySelectorAll(".video");
 // =========== extra btn elements ====================
 const SCROLL_UP_BTN = document.querySelector(".scroll_up");
 const MODE_SETTING = document.querySelector(".mode_setting");
+const MODE_ICON = document.querySelector('.mode_icon');
 
 // =========== Window Scroll =========================
 const naver_search_bar = document.querySelector('.main_logo');
@@ -22,7 +23,6 @@ window.onscroll = function(e) {
     let scrollY_pixel = window.scrollY;
     if (scrollY_pixel >= 500) {
         naver_search_bar.classList.add('search_bar_behavior');
-        
     } else {
         naver_search_bar.classList.remove('search_bar_behavior');
     }
@@ -41,8 +41,11 @@ MODE_SETTING.addEventListener("click", change_theme);
 function change_theme() {
     let currentMode = document.documentElement.getAttribute("data-theme");
     if (currentMode == "dark") {
+        // <i class="far fa-moon"></i>
+        MODE_SETTING.innerHTML = '<i class="far fa-moon"> Change to Dark</i>'
         document.documentElement.setAttribute("data-theme", "light");        
     } else {
+        MODE_SETTING.innerHTML = '<i class="far fa-sun"> Change to Light</i>'
         document.documentElement.setAttribute("data-theme", "dark");
     }
 }
