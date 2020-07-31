@@ -14,6 +14,9 @@ const videos = document.querySelectorAll(".video");
 const SCROLL_UP_BTN = document.querySelector(".scroll_up");
 const MODE_SETTING = document.querySelector(".mode_setting");
 const MODE_ICON = document.querySelector('.mode_icon');
+// =========== Option_more behavior ==================
+const option_more = document.querySelector('.option_more');
+const option_more_displayer = document.querySelector('.option_more_displayer');
 
 // =========== Window Scroll =========================
 const naver_search_bar = document.querySelector('.main_logo');
@@ -36,8 +39,23 @@ option_to_read_active();
 auto_play_video();
 SCROLL_UP_BTN.addEventListener("click", scroll_to_top);
 MODE_SETTING.addEventListener("click", change_theme);
+option_more.addEventListener("click", display_more_options);
 
 // Functions
+function display_more_options() {
+    let windowScroll_X = window.innerWidth;
+    if (windowScroll_X > 1035) {
+        return;
+    } else {
+        console.log("hello Outer");
+        if (option_more_displayer.classList.contains("display_block")) {
+            option_more_displayer.classList.remove("display_block");
+        } else {
+            option_more_displayer.classList.add("display_block");
+        }
+    }
+}
+
 function change_theme() {
     let currentMode = document.documentElement.getAttribute("data-theme");
     if (currentMode == "dark") {

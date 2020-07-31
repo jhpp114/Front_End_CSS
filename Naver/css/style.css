@@ -218,6 +218,25 @@ section > .main_option > .filter_more > p > i {
     margin-right: 0.1rem;
 }
 
+.option_more_displayer {
+    display: none;
+}
+
+.display_block {
+    display: block;
+    margin: 2rem;
+}
+
+.display_block > div {
+    margin: 1rem 0rem;
+    cursor: pointer;
+}
+
+.display_block > div:hover {
+    color: var(--main_logo_color);
+    border-bottom: thin;
+}
+
 /* ========================== */
 /* End Line Options Start */
 /* ========================== */
@@ -690,6 +709,7 @@ section > .main_option > .filter_more > p > i {
 .main_section > .main_content > .video_contents_container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .main_section > .main_content > .video_contents_container > .video_container  > .video {
@@ -1408,8 +1428,170 @@ section > .main_option > .filter_more > p > i {
         width: 45px;
         margin-right: 1rem;
     }
+
+    .side_movie_container > .new_movies {
+        display: grid;
+        grid-template-columns: repeat(auto, 1fr);
+    }
+
+    .side_movie_container > .new_movies img {
+        width: 150px;
+    }
 }
 
 @media (max-width: 1180px) {
+    .main_section > .main_content > .option_things_to_read > .fa-chevron-circle-left {
+        position: absolute;
+        top: 30%;
+        left: -1.5%;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+
+    .main_section > .main_content > .option_things_to_read > .fa-chevron-circle-right {
+        position: absolute;
+        top: 30%;
+        right: -1.5%;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+
+    .main_section > .main_content > .option_things_to_read > div > a {
+        font-size: 0.6rem;
+    }
+
+    .side_movie_container > .new_movies img {
+        width: 120px;
+        height: 170px;
+    }
+
+    .welcome_shopping_container > .welcome_shopping_header > p {
+        font-size: 0.8rem;
+    }
+
+    .welcome_shopping_main_contents > .welcome_lists > li {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 1135px) {
+    section > .main_option > .option_green {
+        font-size: 0.9rem;
+    }
+
+    .news_highlights {
+        font-size: 0.8rem;
+    }
+
+    .news_highlights_side_news > span > i {
+        font-size: 0.7rem;
+    }
+
+    .news_hl_right > .news_highlights_side_news > .side_news_span {
+        font-size: 0.5rem;
+    }
+
+    .main_section > .main_content > .news_highlights > .news_hl_right > .news_highlights_side_news > span {
+        font-size: 0.7rem;
+    }
+
+    .book_section_title {
+        font-size: 0.9rem;
+    }
+
+    .main_section > .main_content > .book_contents > .book_section_header > .left_book_header > .book_section_title > .book_stat_date 
+, .main_section > .main_content > .book_contents > .book_section_header > .right_book_header p
+    {
+        margin-left: 0.4rem;
+        font-size: 0.7rem;
+    }
+
+    .main_section > .main_content > .book_contents > .book_lists > .book_list > a > span > .book_title_container > .book_title {
+        font-size: 0.9rem;
+    }
     
+    .main_section > .main_content > .book_contents > .book_lists > .book_list > a > span > .book_info_container  > .book_info {
+        font-size: 0.7rem;
+    }
+
+    .book_extra_category {
+        font-size: 0.9rem;
+    }
+
+    /* Entertain Section */
+    .main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > img {
+        margin-right: 1rem;
+        width: 160px;
+    }
+
+    .main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > .content_filter_entertain {
+        font-size: 0.9rem;
+    }
+
+    .main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > .content_title {
+        font-size: 0.9rem;
+    }
+
+    .main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > .content_story {
+        font-size: 0.8rem;
+    }
+
+    .main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > .content_writer {
+        font-size: 0.7rem;
+    }
+    /* End Entertain */
+    /* Book Section */
+    .main_section > .main_content > .book_content_extra_container > .book_contents_extra > .book_content_extra > a > img {
+        width: 160px;
+    }
+
+    .main_section > .main_content > .book_content_extra_container > .book_contents_extra > .book_content_extra > a > .right_book_extra_content > .book_extra_category {
+        font-size: 0.9rem;
+    }
+
+    .main_section > .main_content > .book_content_extra_container > .book_contents_extra > .book_content_extra > a > .right_book_extra_content > .book_extra_title {
+        font-size: 0.9rem;
+    }
+
+    .main_section > .main_content > .book_content_extra_container > .book_contents_extra > .book_content_extra > a > .right_book_extra_content > .book_info {
+        color: var(--gray_font_color);
+        margin-bottom: 0.2rem;
+        font-size: 0.7rem;
+    }
+
+    .main_section > .main_content > .video_contents_container > .video_container  > .video {
+        width: 260px;
+        margin: 0.5rem;
+    }
+    /* End Book Section */
+}
+
+@media (max-width: 1067px) {
+    section > .main_logo > #main_search_bar > .fa-keyboard {
+        right: 20%;
+    }
+
+    section > .main_logo > #main_search_bar > .fa-caret-down {
+        right: 13%;
+    }
+
+    .main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_heading_items > .shopping_item_cont > .shopping_item > img {
+        width: 80px;
+    } 
+
+    .main_section > .main_content > .book_contents > .book_lists > .book_list > a > img {
+        width: 110px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 1035px) {
+    section > .main_option > .option_black {
+        display: none;
+    }
+
+    section > .main_option > .option_more {
+        font-weight: bold;
+        cursor: pointer;
+    }
 }
