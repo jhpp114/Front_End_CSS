@@ -24,9 +24,7 @@ window.onscroll = function(e) {
         
     } else {
         naver_search_bar.classList.remove('search_bar_behavior');
-        
     }
-
 }
 
 // Event listeners

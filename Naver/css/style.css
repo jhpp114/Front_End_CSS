@@ -1188,10 +1188,22 @@ section > .main_option > .filter_more > p > i {
     padding: 0.5rem;
     border-radius: 2rem;
     align-items: center;
+    box-shadow: 2px 1px 1px 1px var(--gray_font_color);
 }
 
 .footer > .extra_buttons > div > i {
-    font-size: 1.5rem;
+    font-size: 1.0rem;
+    color: var(--gray_font_color);
+    margin: 0rem 1rem;
+}
+
+.footer > .extra_buttons > div > span {
+    display: inline-block;
+    align-items: center;
+}
+
+.footer > .extra_buttons > div > span > p {
+    font-weight: bold;
     color: var(--gray_font_color);
 }
 /* ============ */
