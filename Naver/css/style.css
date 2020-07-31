@@ -1316,6 +1316,52 @@ section > .main_option > .filter_more > p > i {
         margin-bottom: 0.5rem;
         border: 1px solid var(--gray_font_color);
     }
+}
 
+@media (max-width: 1250px) {
+    section > .first_side > p {
+        font-size: 0.7rem;
+    }
+
+    section > .main_logo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        width: 88%;
+    }
+
+    section > .main_logo > img {
+        width: 240px;
+    }
+
+    .news_highlights {
+        font-size: 0.9rem;
+    }
+
+    .news_highlights_side_news > span > i {
+        font-size: 0.8rem;
+    }
+
+    .basic_thing_to_read {
+        font-size: 0.8rem;
+    }
+
+    .main_section > .main_content > .basic_thing_to_read > .things_to_read_left  p {
+        font-weight: bold;
+        font-size: 1rem;
+    }   
+
+    .things_to_read_left > p > span {
+        font-size: 0.8rem;
+    }
+
+    .main_section > .main_content > .video_contents_container > .video_container  > .video {
+        width: 220px;
+        margin-bottom: 1rem;
+    }
+
+    /* right side content start */
     
 }
