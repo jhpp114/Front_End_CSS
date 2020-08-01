@@ -1974,5 +1974,97 @@ section > .main_option > .filter_more > p > i {
 }
 
 @media (max-width: 520px) {
+    .first_section > .hidden_login {
+        width: 100%;
+    }
+
+    section > .main_option > .option_green {
+        font-size: 0.7rem;
+    }
+
+    section > .main_option > .option_more {
+        font-size: 0.6rem;
+    }
+
+    section > .main_option > .filter_more {
+        font-size: 0.6rem;
+    }
+
+    .first_section > .hidden_login > p {
+        margin-right: 1rem;
+    }
+
+    .main_section > .main_content > .book_contents > .book_lists {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 2%;
+    }
+
+    .main_section > .main_content > .book_contents > .book_lists > .book_list > a > img {
+        width: 110px;
+        height: 170px;
+        border: 1px solid var(--gray_font_color);
+    }
+
+    .main_section > .main_content > .book_contents > .book_lists > .book_list > a > span > .book_title_container {
+        height: 1rem;
+    }
+
+    .side_movie_container > .new_movies img {
+        width: 100px;
+        height: 150px;
+    }
+
+    .footer > .footer_mains > .footer_main {
+        width: 33%;
+        display: block;
+        /* justify-content: flex-start;
+        flex-wrap: wrap; */
+    }
+
+    .footer > .footer_mains > .footer_main > img {
+        width: 100px;
+    }
+
+    .footer_main_title{
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer_sub p {
+        font-size: 0.5rem;
+        font-weight: normal;
+    }
+
+    .footer > .extra_buttons > div {
+        width: 8rem;
+        margin: 0.4rem;
+        height: 1.5rem;
+        padding: 0.1rem;
+    }
+
+    .footer > .extra_buttons > div > i {
+        font-size: 0.6rem;
+        margin: 0.5rem 1rem;
+    }
+
+    .footer > .explanation > .explanation_main_container > .explanation_creater > h4 {
+        font-size: 0.7rem;
+    }
+
+
+    .footer > .footer_mains > .footer_main > .footer_main_info > .footer_main_title {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    .footer > .footer_mains > .footer_main > .footer_main_info > p {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 470px) {
     
 }
