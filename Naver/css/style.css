@@ -104,6 +104,15 @@ section > .main_logo {
     padding-bottom: 1rem;
 }
 
+.hidden_login {
+    margin-right: 5rem;
+    text-align: right;
+    font-weight: bold;
+    color: var(--main_logo_color);
+    text-decoration: underline;
+    display: none;
+}
+
 section > .main_logo > img {
     width: 280px;
     cursor: pointer;
@@ -1593,5 +1602,180 @@ section > .main_option > .filter_more > p > i {
     section > .main_option > .option_more {
         font-weight: bold;
         cursor: pointer;
+    }
+
+    .main_section > .main_content > .news_highlights > .news_hl_right > .news_highlights_side_news > span {
+        display: none;
+    }
+
+    .main_section > .main_content > .basic_thing_to_read > .things_to_read_left  p {
+        white-space: pre-line;
+    }   
+
+    .book_section_title {
+        white-space: pre-line;
+    }
+
+    .main_section > .main_content > .video_contents_container > .video_container  > .video {
+        width: 220px;
+    }
+
+    .main_section > .main_content > .video_contents_container > .video_container > span > .video_title {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .main_section > .main_content > .video_contents_container > .video_container > span > .video_info {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+    /* End Left Side */
+    /* Start Right Side */
+    .main_section > .side_content > .right_content_signin > span > .naver_signin {
+        padding: 0.5rem;
+    }
+
+    .main_section > .side_content > .right_content_signin > span > .signin_helper {
+        margin-top: 0.3rem;
+        white-space: pre-line;
+    }
+
+    .info_weather_container {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        margin: 0.1rem 0rem;
+    }
+
+    .info_weather_container > .weather_title > img {
+        width: 50px;
+        margin-right: 0.2rem;
+    }   
+    .welcome_lists > li {
+        white-space: pre-line;
+    }
+
+    .shopping_header_container {
+        white-space: pre-line;
+    }
+    /* End Right Side */
+    /* Footer Start */
+    .footer {
+        width: 95%;
+    }
+
+    .footer > .footer_mains > .footer_main > img {
+        width: 140px;
+    }
+    
+    .footer > .footer_mains > .footer_main > .footer_main_info > .footer_main_title {
+        font-size: 0.9rem;
+    }
+
+    .footer > .footer_mains > .footer_main > .footer_main_info > p {
+        font-size: 0.8rem;
+    }
+
+    .footer > .footer_sub > p {
+        font-size: 0.9rem;
+    }
+
+    .footer > .explanation > .explanation_main_container > .explanation_creater > h4 {
+        font-size: 0.9rem;
+    }
+
+    .footer > .explanation > .explanation_main_container > .explanation_creator > p {
+        font-size: 0.8rem;
+    }
+
+    .footer > .extra_buttons > div {
+        width: 10rem;
+        margin: 0.4rem;
+        height: 2.5rem;
+        padding: 0.2rem;
+    }
+
+    .footer > .extra_buttons > div > i {
+        font-size: 0.8rem;
+        margin: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 965px) {
+    .side_movie_title {
+        font-size: 1rem;
+    }
+    .side_movie_updated_date {
+        font-size: 0.9rem;
+    }
+    .side_movie_container > .new_movies img {
+        width: 110px;
+    }
+}
+
+/* It will */
+@media (max-width: 935px) {
+    .main_section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .section_divider {
+        margin-top: 1rem;
+    }
+    .hidden_login {
+        display: block;
+    }
+    /* Side Content */
+    .right_content_signin {
+        display: none;
+    }
+
+    .info_weather_container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 1rem;
+    }
+    .advertisement_field {
+        display: none;
+    }
+
+    .main_section > .side_content > .shopping_section_container >.shopping_places {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        padding: 0.5rem;
+    }
+
+    .shopping_header_container {
+        white-space: normal;
+    }
+
+    .main_section > .side_content > .shopping_section_container > .shopping_header  > .shopping_heading_items > .shopping_item_cont{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .main_section > .side_content > .shopping_section_container > .shopping_header > .shopping_heading_items > .shopping_item_cont > .shopping_item > img {
+        width: 140px;
+    } 
+
+    .welcome_lists > li {
+        white-space: normal;
+    }
+
+    .side_movie_container > .new_movies {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .side_movie_container > .new_movies img {
+        width: 160px;
+        height: 200px;
+    }
+    .footer {
+        width: 80%;
     }
 }
