@@ -162,6 +162,7 @@ section > .main_logo > #main_search_bar > div {
     top: 20%;
     right: 0;
 }
+
 section > .main_logo > #main_search_bar > div > .fa-search {
     margin-top: 25%;
     cursor: pointer;
@@ -2066,5 +2067,102 @@ section > .main_option > .filter_more > p > i {
 }
 
 @media (max-width: 470px) {
-    
+
+    section > .main_logo {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .first_section > .main_logo > img {
+        width: 150px;
+    }
+
+    section > .main_logo > #main_search_bar > input[type=text] {
+        margin-top: 0.5rem;
+        padding: 0.6rem;
+    }
+
+    section > .main_logo > #main_search_bar > div {
+        position: absolute;
+        background-color: var(--main_logo_color);
+        width: 2rem;
+        height: 2.2rem;
+        font-size: 1.2rem;
+        color: white;
+        top: 20%;
+        right: 0;
+    }
+
+    .main_section > .main_content > .media_grid > img {
+        width: 100%;
+        height: 2.5rem;
+        padding: 0.4rem;
+        border: 1.5px solid var(--media_grid_line);
+    }
+
+    .main_section > .main_content > .media_grid > .fa-chevron-circle-left {
+        display: none;
+    }
+
+    .main_section > .main_content > .media_grid > .fa-chevron-circle-right {
+        display: none;
+    }
+
+    .main_section > .main_content > .basic_thing_to_read > .things_to_read_left  p {
+        font-size: 0.7rem;
+    }   
+
+    .main_section > .main_content > .option_things_to_read {
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 1rem;
+    }
+
+    .main_section > .main_content > .option_things_to_read div {
+        border: 0.25px solid var(--media_grid_line);
+        padding: 0.5rem;
+    }
+
+    .main_section > .side_content {
+        margin-left: 0rem;
+    }
+
+    .video_container {
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+    }
+
+    .new_movies {
+        margin: 0 auto;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        text-align: center;
+    }
+
+    .side_movie_container > .new_movies img {
+        width: 80px;
+    }
+}
+
+@media (max-width: 415px) {
+    .main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > img {
+        margin-right: 1rem;
+        width: 100px;
+        height: 150px;
+    }
+
+    .main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > .content_story {
+        font-size: 0.5rem;
+    }
+
+    .main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > .content_writer {
+        font-size: 0.4rem;
+    }
+
+    .info_weather_container {
+        position: absolute;
+        top: 3%;
+        left: 0;
+        margin-top: 1rem;
+    }
 }
