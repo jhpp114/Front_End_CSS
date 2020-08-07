@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>View Check In</h1>
+    <div class="getItem_container">
+
+    </div>
+    <script>
+        getData();
+        async function getData() {
+            const ITEM_CONTAINER = document.querySelector('.getItem_container');
+            const data_get = await fetch('/api');
+            const responses = await data_get.json();
+            console.log(responses);
+            responses.forEach((response) => {
+                const div = document.createElement('div');
+                const span_latitude = document.createElement('span');
+                const span_longitude = document.createElement('span');
+                const span_date = document.createElement('span');
+                span_latitude.textContent = response.lat;
+                span_longitude.textContent = response.long;
+                span_date.textContent = response.timestamp;
+                div.appendChild(span_latitude);
+                div.appendChild(span_longitude);
+                div.appendChild(span_date);
+                ITEM_CONTAINER.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>
