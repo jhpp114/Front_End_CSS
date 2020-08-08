@@ -1,4 +1,5 @@
 getGeo();
+getWeather();
 
 function getGeo() {
     const LATITUDE = document.querySelector('.latitude');
@@ -26,7 +27,23 @@ function getGeo() {
             }
             const RESPONSE = await fetch('/api', option);
             const DATA = await RESPONSE.json();
-            console.log(DATA);
         })
+    });
+}
+
+function getWeather() {
+    navigator.geolocation.getCurrentPosition( async position => {
+        let latitude = position.coords.latitude;
+        let longitude = position.coords.longitude;
+        const fetched_weahter = await fetch(`/weather/${latitude}/${longitude}`);
+        const fetched_weahter_json = await fetched_weahter.json();
+
+        const city = document.querySelector('.weather_city');
+        const condition = document.querySelector('.weather_condition');
+        const temperature = document.querySelector('.weather_temp');
+        city.textContent = fetched_weahter_json.name;
+        condition.textContent = fetched_weahter_json.weather[0].description;
+        temperature.textContent = fetched_weahter_json.main.temp;
+        console.log(fetched_weahter_json);
     });
 }

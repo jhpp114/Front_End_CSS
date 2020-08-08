@@ -1,5 +1,7 @@
 const express = require('express');
+const fetch = require('node-fetch');
 const Datastore = require('nedb');
+
 const app = express();
 const PORT_NUMBER = 3000;
 
@@ -32,6 +34,20 @@ app.post('/api', (req, res) => {
     ,   timestamp: timestamp
     };
     res.json(RESPONSE_OBJ);
+});
+
+
+// weather
+app.get('/weather/:lat/:long', async (req, res)=> {
+    const latitude = req.params.lat;
+    const longitude = req.params.long;
+    console.log(latitude);
+    console.log(longitude);
+    const WEATHER_API_KEY =  `f1531bea64c81285bbf775f7d0ad13bd`;
+    const WEAHTER_API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${WEATHER_API_KEY}`;
+    const responses = await fetch(WEAHTER_API_URL);
+    const data = await responses.json();
+    res.json(data);
 });
 
 app.listen(PORT_NUMBER, () => {

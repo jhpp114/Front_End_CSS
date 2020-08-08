@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+body > a {
+    margin: 1rem;
+}
+
+/* Weather Here */
+.weather_container {
+    margin: 3rem;
+    background-color: pink;
+    font-size: 2rem;
+}
+
+
+
+/* View Check in */
 .getItem_container > div {
     margin: 3rem;
     background-color: pink;
