@@ -1,5 +1,6 @@
 const express = require('express');
 const fetch = require('node-fetch');
+require('dotenv').config()
 const Datastore = require('nedb');
 
 const app = express();
@@ -10,6 +11,8 @@ db.loadDatabase();
 
 app.use(express.static('public'));
 app.use(express.json());
+
+// console.log(process.env);
 
 app.get('/api', async (req, res) => {
     await db.find({}, async (error, foundData) => {
@@ -43,10 +46,21 @@ app.get('/weather/:lat/:long', async (req, res)=> {
     const longitude = req.params.long;
     console.log(latitude);
     console.log(longitude);
-    const WEATHER_API_KEY =  `f1531bea64c81285bbf775f7d0ad13bd`;
+    const WEATHER_API_KEY =  process.env.WEATHER_API_KEY;
     const WEAHTER_API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${WEATHER_API_KEY}`;
     const responses = await fetch(WEAHTER_API_URL);
-    const data = await responses.json();
+    const Weater_Data = await responses.json();
+    console.log(Weater_Data);
+    // air quality api
+    const AIR_QUAL_URL = `https://api.openaq.org/v1/latest?coordinates=${latitude},${longitude}`;
+    const AIR_QUAL_RESPONSE = await fetch(AIR_QUAL_URL);
+    const AIR_DATA = await AIR_QUAL_RESPONSE.json();
+
+    const data = {
+        weather: Weater_Data
+    ,   air: AIR_DATA
+    };
+    
     res.json(data);
 });
 
