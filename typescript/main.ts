@@ -47,3 +47,29 @@ let student1 = {
 ,   lastname: "Park"
 };
 printPerson(student1);
+
+
+// typescript class
+class Employee {
+    private employeeName: string;
+    constructor(name: string) {
+        this.employeeName = name;
+    }
+    greeting() {
+        console.log(`Good Morning ${this.employeeName}`);
+    }
+}
+
+const emp = new Employee("park");
+emp.greeting();
+
+class Manager extends Employee {
+    private location: string
+    constructor(managerName: string, location: string) {
+        super(managerName);
+        this.location = location;
+    }
+
+}
+const managerEdmonds = new Manager("Park", "Edmonds");
+managerEdmonds.greeting();

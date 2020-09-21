@@ -1,4 +1,17 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 exports.__esModule = true;
 var message = "hello world";
 console.log(message);
@@ -41,3 +54,26 @@ var student1 = {
     lastname: "Park"
 };
 printPerson(student1);
+// typescript class
+var Employee = /** @class */ (function () {
+    function Employee(name) {
+        this.employeeName = name;
+    }
+    Employee.prototype.greeting = function () {
+        console.log("Good Morning " + this.employeeName);
+    };
+    return Employee;
+}());
+var emp = new Employee("park");
+emp.greeting();
+var Manager = /** @class */ (function (_super) {
+    __extends(Manager, _super);
+    function Manager(managerName, location) {
+        var _this = _super.call(this, managerName) || this;
+        _this.location = location;
+        return _this;
+    }
+    return Manager;
+}(Employee));
+var managerEdmonds = new Manager("Park", "Edmonds");
+managerEdmonds.greeting();
