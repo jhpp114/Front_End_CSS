@@ -1,10 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import PersonInfo from "./PersonInfo.js"
+import MyApp from './MyApp.js'
 
 const root = document.querySelector('#root');
-
 ReactDOM.render(
-  <PersonInfo/>
+  <MyApp/>
 , root
-);
+)
