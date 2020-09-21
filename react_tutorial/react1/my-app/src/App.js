@@ -2,9 +2,16 @@ import React from "react";
 import Header from "./component/Header";
 import MainContent from "./component/MainContent";
 import NameCard from "./component/NameCard";
+import Joke from "./component/Joke";
+import RenderQuestion from "./component/RenderQuestion";
 import Footer from "./component/Footer";
 
 function App() {
+  const renderForJoke = Joke.map( (joke_data) => {
+    return(
+      <RenderQuestion key={joke_data.id} question={joke_data.question} answer={joke_data.punch_line}/>
+    )
+  })
   return (
     <div>
       <Header/>
@@ -33,6 +40,9 @@ function App() {
         phone="(444)-444-4444"
         email="444@444.com"
       />
+      <div>
+          {renderForJoke}
+      </div>
       <Footer/>
     </div>
   )

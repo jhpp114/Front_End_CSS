@@ -2,11 +2,8 @@ import React from "react"
 import "../App.css"
 
 function MainContent() {
-    const style = {
-        fontSize: "2rem"
-    };
     return (
-        <div class="todo_container">
+        <div className="todo_container">
             <p className="todo_item">
                 <span>
                     <input type="checkbox" name="" value=""></input>
