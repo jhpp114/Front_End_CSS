@@ -47,3 +47,11 @@
   margin-right: 0.5rem;
   cursor: pointer;
 }
+
+.isComplete {
+  background-color: rgb(129, 218, 129);
+}
+
+.isNotComplete {
+  background-color: rgb(212, 104, 104);
+}

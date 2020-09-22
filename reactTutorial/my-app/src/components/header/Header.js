@@ -18,7 +18,7 @@ const Header = () => {
     }
     return (
         <nav className="navbar">
-            <h1>To Do List Phase2</h1>
+            <h1>To Do List Phase3</h1>
             <ul className="menu_contents">
                 <li>Nav Item1</li>
                 <li>Nav Item2</li>

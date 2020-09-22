@@ -4,16 +4,16 @@ import Main from './components/main/TodoList'
 import Footer from './components/footer/Footer'
 // some practices
 
-import JokeContainer from './components/Joke/JokeContainer'
-import ProductContainer from './components/product/ProductContainer'
+// import JokeContainer from './components/Joke/JokeContainer'
+// import ProductContainer from './components/product/ProductContainer'
 const MyApp = () => {
     return (
         <div>
-            {/* <Header/>
+            <Header/>
             <Main/>
-            <Footer/> */}
+            <Footer/>
             {/* <JokeContainer/> */}
-            <ProductContainer/>
+            {/* <ProductContainer/> */}
         </div>
     )
 }

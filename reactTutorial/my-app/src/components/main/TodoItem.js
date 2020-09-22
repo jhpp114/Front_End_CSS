@@ -1,10 +1,12 @@
 import React from 'react'
-
-const TodoItem = () => {
+import '../../App.css'
+const TodoItem = (props) => {
+    console.log(props)
+    
     return (
-        <li>
+        <li className= {props.isComplete? 'isComplete' : 'isNotComplete'}>
             <input type="checkbox" name="todo1"/>
-            <span>Todo 1</span>
+            <span>{props.content}</span>
         </li>
     )
 }
