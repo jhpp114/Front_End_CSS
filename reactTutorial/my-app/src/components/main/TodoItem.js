@@ -5,7 +5,7 @@ const TodoItem = (props) => {
     
     return (
         <li className= {props.isComplete? 'isComplete' : 'isNotComplete'}>
-            <input type="checkbox" name="todo1"/>
+            <input type="checkbox" checked={props.isComplete}/>
             <span>{props.content}</span>
         </li>
     )
