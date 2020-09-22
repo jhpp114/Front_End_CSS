@@ -1,7 +1,8 @@
 import React from 'react'
-import Header from './components/header/Header.js'
-import Main from './components/main/PersonInfo.js'
-import Footer from './components/footer/Footer.js'
+import Header from './components/header/Header'
+import Main from './components/main/TodoList'
+import Footer from './components/footer/Footer'
+
 const MyApp = () => {
     return (
         <div>
@@ -11,4 +12,5 @@ const MyApp = () => {
         </div>
     )
 }
+
 export default MyApp
