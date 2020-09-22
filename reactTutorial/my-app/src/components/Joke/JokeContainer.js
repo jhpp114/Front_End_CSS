@@ -1,22 +1,20 @@
 import React from 'react'
 import Joke from './Joke'
+import jokeData from './JokeData'
 
 const JokeContainer = () => {
+    const jokeComponenet = jokeData.map( (jokes) => {
+        return (
+            <Joke 
+                key = {jokes.id}
+                question = {jokes.question}
+                punchline = {jokes.punchline}
+            />
+        )
+    });
     return (
         <div>
-            <Joke
-                joke= {{
-                    question: "My wife told me to stop acting like a flamingo."
-                ,   punchline: "I had to put my foot down."
-                }}
-            />
-            
-            <Joke
-                joke= {{
-                    question:""
-                ,   punchline: "Because he doesn’t want to be spotted."
-                }}
-            />
+            {jokeComponenet}
         </div>
     )
 }
