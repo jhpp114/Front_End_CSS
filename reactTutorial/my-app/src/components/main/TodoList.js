@@ -3,21 +3,46 @@ import TodoItem from './TodoItem'
 import todoData from './todoData'
 import '../../App.css'
 
-const TodoList = () => {
-    const listsOfTodo = todoData.map( (todo) => {
-        return (
+class TodoList extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            todoJson: todoData
+        }
+    }
+    render() {
+        const todos = this.state.todoJson.map( (todo) => {
+            return (
             <TodoItem
-                key = {todo.id}
-                content = {todo.text}
-                isComplete = {todo.completed}
+                key={todo.id}
+                content={todo.text}
+                isComplete={todo.completed}
             />
+            )
+        });
+        return (
+            <ul className="todo_Container">
+                {todos}
+            </ul>
         )
-    })
-    return (
-        <ul className="todo_Container">
-            {listsOfTodo}
-        </ul>
-    )
+    }
 }
+
+// const TodoList = () => {
+//     const listsOfTodo = todoData.map( (todo) => {
+//         return (
+//             <TodoItem
+//                 key = {todo.id}
+//                 content = {todo.text}
+//                 isComplete = {todo.completed}
+//             />
+//         )
+//     })
+//     return (
+//         <ul className="todo_Container">
+//             {listsOfTodo}
+//         </ul>
+//     )
+// }
 
 export default TodoList

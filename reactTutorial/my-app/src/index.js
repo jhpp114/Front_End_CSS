@@ -3,15 +3,18 @@ import ReactDOM from 'react-dom'
 import MyApp from './MyApp'
 
 const root = document.querySelector('#root');
-// ReactDOM.render(
-//   <MyApp/>
-// , root
-// )
+ReactDOM.render(
+  <MyApp/>
+, root
+)
+
 class App extends React.Component {
   render() {
     return (
       <div>
-        <Header/>
+        <Header 
+          username = "Jun Park"
+        />
         <Greeting/>
       </div>
     )
@@ -50,7 +53,7 @@ class Greeting extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <App/>
-, root
-)
+// ReactDOM.render(
+//   <MyApp/>
+// , root
+// )
