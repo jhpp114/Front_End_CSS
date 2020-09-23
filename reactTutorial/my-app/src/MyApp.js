@@ -8,14 +8,14 @@ import Footer from './components/footer/Footer'
 // import StateInOut from './components/class/StateInOut'
 // import JokeContainer from './components/Joke/JokeContainer'
 // import ProductContainer from './components/product/ProductContainer'
-import Counter from './components/events/Counter'
+// import Counter from './components/events/Counter'
 const MyApp = () => {
     return (
         <div>
-            {/* <Header/>
+            <Header/>
             <Main/>
-            <Footer/> */}
-            <Counter/>
+            <Footer/>
+            {/* <Counter/> */}
             {/* <JokeContainer/> */}
             {/* <ProductContainer/> */}
             {/* <State/>
