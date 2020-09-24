@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from './components/header/Header'
-import Main from './components/main/TodoList'
-import Footer from './components/footer/Footer'
+// import Header from './components/header/Header'
+// import Main from './components/main/TodoList'
+// import Footer from './components/footer/Footer'
 // some practices
 // import State from './components/class/State'
 // import StatePrac from './components/class/StatePrac'
@@ -9,7 +9,8 @@ import Footer from './components/footer/Footer'
 // import JokeContainer from './components/Joke/JokeContainer'
 // import ProductContainer from './components/product/ProductContainer'
 // import Counter from './components/events/Counter'
-import ConditionContainer from './components/conditional/ConditionContainer'
+// import ConditionContainer from './components/conditional/ConditionContainer'
+import APIData from './components/APIData/APIData'
 const MyApp = () => {
     return (
         <div>
@@ -22,7 +23,8 @@ const MyApp = () => {
             {/* <State/>
             <StatePrac/>
             <StateInOut/> */}
-            <ConditionContainer/>
+            {/* <ConditionContainer/> */}
+            <APIData/>
         </div>
     )
 }
