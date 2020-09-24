@@ -10,7 +10,8 @@ import React from 'react'
 // import ProductContainer from './components/product/ProductContainer'
 // import Counter from './components/events/Counter'
 // import ConditionContainer from './components/conditional/ConditionContainer'
-import APIData from './components/APIData/APIData'
+// import APIData from './components/APIData/APIData'
+import FormPartOne from './components/formPart1/FormPartOne'
 const MyApp = () => {
     return (
         <div>
@@ -24,7 +25,8 @@ const MyApp = () => {
             <StatePrac/>
             <StateInOut/> */}
             {/* <ConditionContainer/> */}
-            <APIData/>
+            {/* <APIData/> */}
+            <FormPartOne/>
         </div>
     )
 }
