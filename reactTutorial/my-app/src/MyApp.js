@@ -12,6 +12,7 @@ import React from 'react'
 // import ConditionContainer from './components/conditional/ConditionContainer'
 // import APIData from './components/APIData/APIData'
 import FormPartOne from './components/formPart1/FormPartOne'
+import FromPartThree from './components/formPrac2/FormPractThree'
 const MyApp = () => {
     return (
         <div>
@@ -26,7 +27,8 @@ const MyApp = () => {
             <StateInOut/> */}
             {/* <ConditionContainer/> */}
             {/* <APIData/> */}
-            <FormPartOne/>
+            {/* <FormPartOne/> */}
+            <FromPartThree/>
         </div>
     )
 }
