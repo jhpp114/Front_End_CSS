@@ -9,7 +9,10 @@ class FormPractThree extends React.Component {
         ,   age: ""
         ,   gender: ""
         ,   location: 'UnitedStates'
-        ,   isRestricted: false
+        ,   isVegan: false
+        ,   isHighBloodPressure: false
+        ,   isLowBloodPressure: false
+            
         }
         this.handleChange = this.handleChange.bind(this);
     }
@@ -22,6 +25,7 @@ class FormPractThree extends React.Component {
     }
     render() {
         return (
+            <div>
             <form>
                 <label>First Name</label>
                 <input type="text" 
@@ -48,11 +52,13 @@ class FormPractThree extends React.Component {
                 <input type="radio" 
                         name="gender" 
                         value="male"
-                        onChange={this.handleChange}/>
+                        onChange={this.handleChange}
+                        checked={this.state.gender === 'male'}/>
                 <input type="radio" 
                         name="gender" 
                         value="female"
-                        onChange={this.handleChange}/>
+                        onChange={this.handleChange}
+                        checked={this.state.gender === 'female'}/>
                 <br/>
                 <hr/>
                 <label>Location</label>
@@ -67,13 +73,29 @@ class FormPractThree extends React.Component {
                 <hr/>
                 <label>Restrictions </label>
                 <input type="checkbox" 
-                        name="isRestricted"
-                        checked={this.state.isRestricted}
-                        onChange={this.handleChange}/> Restricted1
-                <p>{this.state.firstName} {this.state.lastName} {this.state.age} {this.state.gender}
-                    {this.state.location} {this.state.isRestricted}
-                </p>
+                        name="isVegan"
+                        checked={this.state.isVegan}
+                        onChange={this.handleChange}/> Is Vegan
+                <input type="checkbox" 
+                        name="isHighBloodPressure"
+                        checked={this.state.isHighBloodPressure}
+                        onChange={this.handleChange}/> Is High blood pressure
+                <input type="checkbox" 
+                        name="isLowBloodPressure"
+                        checked={this.state.isLowBloodPressure}
+                        onChange={this.handleChange}/> Is Low blood pressure
             </form>
+            <h3>Typed User Information</h3>
+                <h6>{this.state.firstName}</h6>
+                <h6>{this.state.lastName}</h6>
+                <h6>{this.state.age}</h6>
+                <h6>{this.state.gender}</h6>
+                <h6>{this.state.location}</h6>
+                <h6>Is Vegan: {this.state.isVegan ? "yes" : "no"}</h6>
+                <h6>Have HighBloodPressure: {this.state.isHighBloodPressure ? "yes" : "no"}</h6>
+                <h6>Have LowBloodPressure: {this.state.isLowBloodPressure ? "yes" : "no"}</h6>
+            </div>
+
         )
     }
 }
