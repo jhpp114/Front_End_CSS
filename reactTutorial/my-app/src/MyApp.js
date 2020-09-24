@@ -9,18 +9,20 @@ import Footer from './components/footer/Footer'
 // import JokeContainer from './components/Joke/JokeContainer'
 // import ProductContainer from './components/product/ProductContainer'
 // import Counter from './components/events/Counter'
+import ConditionContainer from './components/conditional/ConditionContainer'
 const MyApp = () => {
     return (
         <div>
-            <Header/>
+            {/* <Header/>
             <Main/>
-            <Footer/>
+            <Footer/> */}
             {/* <Counter/> */}
             {/* <JokeContainer/> */}
             {/* <ProductContainer/> */}
             {/* <State/>
             <StatePrac/>
             <StateInOut/> */}
+            <ConditionContainer/>
         </div>
     )
 }
