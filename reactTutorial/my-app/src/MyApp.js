@@ -11,8 +11,9 @@ import React from 'react'
 // import Counter from './components/events/Counter'
 // import ConditionContainer from './components/conditional/ConditionContainer'
 // import APIData from './components/APIData/APIData'
-import FormPartOne from './components/formPart1/FormPartOne'
-import FromPartThree from './components/formPrac2/FormPractThree'
+// import FormPartOne from './components/formPart1/FormPartOne'
+// import FromPartThree from './components/formPrac2/FormPractThree'
+import MemeContainer from './components/memeGenerator/MemeContainer'
 const MyApp = () => {
     return (
         <div>
@@ -28,7 +29,8 @@ const MyApp = () => {
             {/* <ConditionContainer/> */}
             {/* <APIData/> */}
             {/* <FormPartOne/> */}
-            <FromPartThree/>
+            {/* <FromPartThree/> */}
+            <MemeContainer/>
         </div>
     )
 }
