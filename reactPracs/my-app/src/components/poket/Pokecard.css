@@ -1,0 +1,32 @@
+.pokedex-header {
+    color: rgb(61, 61, 61);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pokedex-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.pokecard-div {
+    border: 1px solid rgb(216, 216, 216);
+    margin: 1rem;
+    text-align: center;
+    border-radius: 20%;
+    box-shadow: 3px 3px rgb(143, 143, 143);
+}
+
+.pokecard-header {
+    color: rgb(61, 61, 61);
+}
+
+.pokecard-div p {
+    color: rgb(61, 61, 61);
+}
+
+.pokecard-div img {
+    width: 150px;
+}
+
+
