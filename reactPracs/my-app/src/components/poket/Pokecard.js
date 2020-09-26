@@ -10,7 +10,7 @@ const Pokecard = (props) => {
                 {props.name}
             </h2>
             <div>
-                <img src={props.imgsrc}/>
+                <img src={props.imgsrc} alt={props.alt}/>
             </div>
             <p>{props.type}</p>
             <p>{props.base_experience}</p>

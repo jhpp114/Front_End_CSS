@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Pokecard from './Pokecard'
+import ID_Converter from './poketUtil'
 import './Pokecard.css'
 class PokeDex extends Component {
     constructor() {
@@ -25,6 +26,7 @@ class PokeDex extends Component {
         })
     }
     render() {
+        
         console.log(this.state.pokeData);
         console.log(this.state.pokeData.length);
         return (
@@ -32,11 +34,14 @@ class PokeDex extends Component {
                 <h1 className="pokedex-header">Poke Index</h1>
                 <main className="pokedex-container">{
                 this.state.pokeData.map ((eachPoketmon) => {
-                const id = eachPoketmon.id;
+                let id = eachPoketmon.id;
+                id = ID_Converter(id);
+                console.log(typeof(id));
                 const name = eachPoketmon.name;
                 const type = eachPoketmon.type;
                 const base_experience = eachPoketmon.base_experience;
-                const imgsrc = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+                // const imgsrc = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+                const imgsrc = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`
                     return(
                         <Pokecard
                         key={id}
@@ -44,7 +49,8 @@ class PokeDex extends Component {
                         name={name}
                         type={type}
                         base_experience={base_experience}
-                        imgsrc={imgsrc}/>
+                        imgsrc={imgsrc} 
+                        alt="pokemon image"/>
                     )
                 })}
                 </main>
