@@ -1,8 +1,19 @@
 import React from 'react'
-import SlotMachineContainer from './components/slotMachine/SlotMachineContainer.js'
+// import SlotMachineContainer from './components/slotMachine/SlotMachineContainer.js'
+import Food from './components/Food/Food.js'
+import {Choice, Remove} from './components/Food/Helper.js'
 const App = () => {
+  console.log(typeof(Food));
+  let data = Choice(Food());
+  let returnData = Food();
   return (
-    <SlotMachineContainer/>
+    <div>
+      <p>I would like One {data} please</p>
+      <p>Here we go {data}</p>
+      <p>Delicious! May I have another one </p>
+      {returnData = Remove(returnData, data)}
+      <p>Sorry, we're all out. We have {returnData.length}</p>
+    </div>
   )
 }
 export default App;
