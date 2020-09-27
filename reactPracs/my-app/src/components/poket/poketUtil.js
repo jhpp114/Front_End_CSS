@@ -12,14 +12,21 @@ const ID_Converter = (id) => {
 const Random_Assign = (poketmons) => {
     const totalPoketmons = poketmons;
     const RandomIndex = [0,1,2,3,4,5,6,7];
-    let returnData = [];
+    let returnData1 = [];
+    let returnData2 = [];
+    let mid = RandomIndex.length / 2;
     for (let i = 0; i < RandomIndex.length; i++) {
         let randomIndex = Math.floor(Math.random() * totalPoketmons.length);
-        returnData.push(totalPoketmons[randomIndex]);
+        if (i < mid) {
+            returnData1.push(totalPoketmons[randomIndex]);
+            //totalPoketmons.splice(randomIndex, 1);
+        } else {
+            returnData2.push(totalPoketmons[randomIndex]);
+            //totalPoketmons.splice(randomIndex, 1);
+        }
         totalPoketmons.splice(randomIndex, 1);
     }
-    console.log(returnData);
-    return returnData;
+    return {returnData1, returnData2};
 }
 export default ID_Converter
 export {Random_Assign};

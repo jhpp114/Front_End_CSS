@@ -29,4 +29,10 @@
     width: 150px;
 }
 
+.pokecard-winner {
+    color: green;
+}
 
+.pokecard-loser {
+    color: red;
+}
