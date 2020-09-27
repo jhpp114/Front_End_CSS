@@ -1,10 +1,12 @@
 import React from 'react'
-import PokeDex from './components/poket/Pokedex'
+// import PokeDex from './components/poket/Pokedex'
+import PokeGame from './components/poket/PokeGame'
 // pokedex
 const App = () => {
   return (
     <div>
-      <PokeDex/>
+      {/* <PokeDex/> */}
+      <PokeGame/>
     </div>
   )
 }
