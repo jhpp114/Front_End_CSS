@@ -19,10 +19,8 @@ const Random_Assign = (poketmons) => {
         let randomIndex = Math.floor(Math.random() * totalPoketmons.length);
         if (i < mid) {
             returnData1.push(totalPoketmons[randomIndex]);
-            //totalPoketmons.splice(randomIndex, 1);
         } else {
             returnData2.push(totalPoketmons[randomIndex]);
-            //totalPoketmons.splice(randomIndex, 1);
         }
         totalPoketmons.splice(randomIndex, 1);
     }

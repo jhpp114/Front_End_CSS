@@ -31,7 +31,6 @@ class PokeGame extends Component {
     }
 
     render() {
-        //console.log(this.state.pokeData.returnData1);
         let sum1 = 0;
         let sum2 = 0;
         if (this.state.pokeData.returnData1) {
