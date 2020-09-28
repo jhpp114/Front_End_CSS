@@ -21,10 +21,14 @@ class SCContainer extends Component {
                 <main>
                     {this.state.number}                    
                 </main>
-                <p className={this.state.number === 7? 'display':'hide'}>You Are winner</p>
-                <button className={this.state.number === 7? 'hide':'display'} onClick={this.handleClick}>
+                {this.state.number === 7? 
+                <p>
+                    You Are winner
+                </p>
+                :
+                <button onClick={this.handleClick}>
                     Button
-                </button>
+                </button>}
             </div>
         )
     }
