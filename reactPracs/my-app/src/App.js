@@ -1,13 +1,15 @@
 import React from 'react'
 // import PokeDex from './components/poket/Pokedex'
 // import PokeGame from './components/poket/PokeGame'
-import SCContainer from './components/StateClicker/SCContainer'
+// import SCContainer from './components/StateClicker/SCContainer'
+import RollDice from './components/DiceExercise/RollDice'
 const App = () => {
   return (
     <div>
       {/* <PokeDex/> */}
       {/* <PokeGame/> */}
-      <SCContainer/>
+      {/* <SCContainer/> */}
+      <RollDice/>
     </div>
   )
 }
