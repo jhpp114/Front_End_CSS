@@ -1,0 +1,11 @@
+.dieStyle {
+    font-size: 200px;
+    color: rgb(194, 119, 194);
+    margin: 2rem;
+}
+
+.dieStyle.isRolling {
+    transition: all 1.5s ease-in-out;
+    margin-left: 3rem;
+}
+

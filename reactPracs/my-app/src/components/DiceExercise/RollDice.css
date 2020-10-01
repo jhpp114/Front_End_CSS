@@ -1,0 +1,15 @@
+.rolldice-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rollBtn {
+    width: 200px;
+    padding: 1rem;
+    background-color: rgb(41, 41, 41);
+    border: none;
+    border-radius: 2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
