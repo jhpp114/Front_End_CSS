@@ -2,14 +2,18 @@ import React from 'react'
 // import PokeDex from './components/poket/Pokedex'
 // import PokeGame from './components/poket/PokeGame'
 // import SCContainer from './components/StateClicker/SCContainer'
-import RollDice from './components/DiceExercise/RollDice'
+// import RollDice from './components/DiceExercise/RollDice'
+import Lottery from './components/LotteryExercise/Lottery';
 const App = () => {
   return (
     <div>
       {/* <PokeDex/> */}
       {/* <PokeGame/> */}
       {/* <SCContainer/> */}
-      <RollDice/>
+      {/* <RollDice/> */}
+      <Lottery/>
+      <Lottery title="hello world"/>
+      <Lottery title="Lottery with 6 balls" ballNum={6}/>
     </div>
   )
 }

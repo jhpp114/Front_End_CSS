@@ -1,0 +1,11 @@
+.eachLotNumber {
+    background-color: rgb(141, 61, 141);
+    margin: 1rem;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(246, 246, 246);
+}
