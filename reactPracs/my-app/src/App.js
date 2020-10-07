@@ -3,7 +3,8 @@ import React from 'react'
 // import PokeGame from './components/poket/PokeGame'
 // import SCContainer from './components/StateClicker/SCContainer'
 // import RollDice from './components/DiceExercise/RollDice'
-import Lottery from './components/LotteryExercise/Lottery';
+// import Lottery from './components/LotteryExercise/Lottery';
+import CoinFlipContainer from './components/CoinFlip/CoinFlipContainer'
 const App = () => {
   return (
     <div>
@@ -11,9 +12,10 @@ const App = () => {
       {/* <PokeGame/> */}
       {/* <SCContainer/> */}
       {/* <RollDice/> */}
-      <Lottery/>
+      {/* <Lottery/>
       <Lottery title="hello world"/>
-      <Lottery title="Lottery with 6 balls" ballNum={6}/>
+      <Lottery title="Lottery with 6 balls" ballNum={6}/> */}
+      <CoinFlipContainer/>
     </div>
   )
 }
