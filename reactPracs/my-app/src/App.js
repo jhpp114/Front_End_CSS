@@ -4,7 +4,8 @@ import React from 'react'
 // import SCContainer from './components/StateClicker/SCContainer'
 // import RollDice from './components/DiceExercise/RollDice'
 // import Lottery from './components/LotteryExercise/Lottery';
-import CoinFlipContainer from './components/CoinFlip/CoinFlipContainer'
+// import CoinFlipContainer from './components/CoinFlip/CoinFlipContainer'
+import ButtonList from './components/methodWithArg/ButtonList'
 const App = () => {
   return (
     <div>
@@ -15,7 +16,8 @@ const App = () => {
       {/* <Lottery/>
       <Lottery title="hello world"/>
       <Lottery title="Lottery with 6 balls" ballNum={6}/> */}
-      <CoinFlipContainer/>
+      {/* <CoinFlipContainer/> */}
+      <ButtonList/>
     </div>
   )
 }
