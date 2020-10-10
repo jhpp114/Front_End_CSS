@@ -5,7 +5,8 @@ import React from 'react'
 // import RollDice from './components/DiceExercise/RollDice'
 // import Lottery from './components/LotteryExercise/Lottery';
 // import CoinFlipContainer from './components/CoinFlip/CoinFlipContainer'
-import ButtonList from './components/methodWithArg/ButtonList'
+// import ButtonList from './components/methodWithArg/ButtonList'
+import NumberBtn from './components/NumberBtn/NumberBtn';
 const App = () => {
   return (
     <div>
@@ -17,7 +18,8 @@ const App = () => {
       <Lottery title="hello world"/>
       <Lottery title="Lottery with 6 balls" ballNum={6}/> */}
       {/* <CoinFlipContainer/> */}
-      <ButtonList/>
+      {/* <ButtonList/> */}
+      <NumberBtn/>
     </div>
   )
 }
