@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { v4 as uuidv4 } from 'uuid';
 // form that pass value to formboxlist and update box array
 class FormColorBoxForm extends Component {
     constructor(props) {
@@ -21,7 +21,8 @@ class FormColorBoxForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.props.addBox(this.state);
+        const newBox = {...this.state, id:uuidv4()}
+        this.props.addBox(newBox);
         this.setState({
             width: ""
         ,   height: ""

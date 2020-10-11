@@ -7,14 +7,10 @@ class FormBoxList extends Component {
         super(props);
         this.state = {
             boxes: [
-                {
-                    width: 10
-                ,   height: 10
-                ,   color: "purple"
-                }
             ]
         }
         this.addBox = this.addBox.bind(this);
+        this.removeBox = this.removeBox.bind(this);
     }
 
     addBox(newBox) {
@@ -24,13 +20,21 @@ class FormBoxList extends Component {
         }))
     }
 
+    removeBox(id) {
+        this.setState(curState => ({
+            boxes: curState.boxes.filter(box => box.id !== id)
+        }))
+    }
+
     render() {
         const boxes = this.state.boxes.map(box => (
             <FormColorBox
+                key={box.id}   
+                id={box.id} 
                 width={box.width}
                 height={box.height}
                 color={box.color}
-              
+                removeBox={this.removeBox}
             />
         ))
         return(
