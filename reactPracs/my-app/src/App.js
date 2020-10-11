@@ -7,7 +7,8 @@ import React from 'react'
 // import CoinFlipContainer from './components/CoinFlip/CoinFlipContainer'
 // import ButtonList from './components/methodWithArg/ButtonList'
 // import NumberBtn from './components/NumberBtn/NumberBtn';
-import FormPrac from './components/FormPrac/FormPrac';
+// import FormPrac from './components/FormPrac/FormPrac';
+import Shopping from './components/FormPrac2/Shopping';
 const App = () => {
   return (
     <div>
@@ -21,7 +22,8 @@ const App = () => {
       {/* <CoinFlipContainer/> */}
       {/* <ButtonList/> */}
       {/* <NumberBtn/> */}
-      <FormPrac/>
+      {/* <FormPrac/> */}
+      <Shopping/>
     </div>
   )
 }
