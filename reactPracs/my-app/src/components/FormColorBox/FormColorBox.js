@@ -6,11 +6,16 @@ class FormColorBox extends Component {
     }
     render() {
         return (
-            <div style={{
-                width:`${this.props.width}px`
-            ,   height:`${this.props.height}px`
-            ,   backgroundColor: `${this.props.color}` 
-            }}>    
+            <div>
+                <div style={{
+                    width:`${this.props.width}px`
+                ,   height:`${this.props.height}px`
+                ,   backgroundColor: `${this.props.color}` 
+                }}>    
+                </div>
+               
+                <button type="">Remove this box</button>
+                <br/><br/>
             </div>
         );
     }

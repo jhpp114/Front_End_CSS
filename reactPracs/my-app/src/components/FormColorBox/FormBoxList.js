@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import FormColorBox from './FormColorBox'
+import FormColorBoxForm from './FormColorBoxForm';
+import FormColorBox from './FormColorBox';
+
 class FormBoxList extends Component {
     constructor(props) {
         super(props);
@@ -12,17 +14,31 @@ class FormBoxList extends Component {
                 }
             ]
         }
+        this.addBox = this.addBox.bind(this);
     }
+
+    addBox(newBox) {
+        console.log("Adding")
+        this.setState(curState => ({
+            boxes: [...curState.boxes, newBox]
+        }))
+    }
+
     render() {
         const boxes = this.state.boxes.map(box => (
             <FormColorBox
                 width={box.width}
                 height={box.height}
                 color={box.color}
+              
             />
         ))
         return(
             <div>
+                <FormColorBoxForm
+                    addBox={this.addBox}
+                />
+                <br/>
                 {boxes}
             </div>
         )
