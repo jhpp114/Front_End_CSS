@@ -9,7 +9,8 @@ import React from 'react'
 // import NumberBtn from './components/NumberBtn/NumberBtn';
 // import FormPrac from './components/FormPrac/FormPrac';
 // import Shopping from './components/FormPrac2/Shopping';
-import FormBoxList from './components/FormColorBox/FormBoxList';
+// import FormBoxList from './components/FormColorBox/FormBoxList';
+import Todo from './components/TodoApp/Todo';
 const App = () => {
   return (
     <div>
@@ -25,7 +26,8 @@ const App = () => {
       {/* <NumberBtn/> */}
       {/* <FormPrac/> */}
       {/* <Shopping/> */}
-      <FormBoxList/>
+      {/* <FormBoxList/> */}
+      <Todo/>
     </div>
   )
 }
