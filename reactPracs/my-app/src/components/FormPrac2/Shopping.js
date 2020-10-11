@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import ShoppingItem from './ShoppingItem'
+// import uuid from 'uuid/v4';
 class Shopping extends Component {
     constructor(props) {
         super(props);
@@ -8,8 +9,7 @@ class Shopping extends Component {
                 {   name: "bread"
                 ,   qty: 2
                 }
-            ,   {
-                    name: "milk"
+            ,   {   name: "milk"
                 ,   qty: 1
                 }
             ]
@@ -29,7 +29,7 @@ class Shopping extends Component {
                 <p>Currently Stored</p>
                 <ul>
                     {this.state.items.map( (shoppingItem,index) => (
-                         <li key={index}>
+                         <li key={shoppingItem.id}>
                             {shoppingItem.name} x {shoppingItem.qty}
                         </li>
                     ))}
