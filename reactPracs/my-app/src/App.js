@@ -8,7 +8,8 @@ import React from 'react'
 // import ButtonList from './components/methodWithArg/ButtonList'
 // import NumberBtn from './components/NumberBtn/NumberBtn';
 // import FormPrac from './components/FormPrac/FormPrac';
-import Shopping from './components/FormPrac2/Shopping';
+// import Shopping from './components/FormPrac2/Shopping';
+import FormBoxList from './components/FormColorBox/FormBoxList';
 const App = () => {
   return (
     <div>
@@ -23,7 +24,8 @@ const App = () => {
       {/* <ButtonList/> */}
       {/* <NumberBtn/> */}
       {/* <FormPrac/> */}
-      <Shopping/>
+      {/* <Shopping/> */}
+      <FormBoxList/>
     </div>
   )
 }
