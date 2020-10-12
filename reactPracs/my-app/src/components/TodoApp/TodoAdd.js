@@ -18,10 +18,10 @@ class TodoAdd extends Component {
             ...this.state, id:uuidv4()
         }
         this.props.addTodo(newTodo);
-        this.setState({
+        this.setState(({
             name: ""
         ,   done: false
-        })
+        }))
     }
     
     handleChange(event) {
