@@ -11,7 +11,8 @@ import React from 'react'
 // import Shopping from './components/FormPrac2/Shopping';
 // import FormBoxList from './components/FormColorBox/FormBoxList';
 // import Todo from './components/TodoApp/Todo';
-import ComponentDidMountPrac1 from './components/ComponentDidMount1/ComponentDidMountPrac1';
+// import ComponentDidMountPrac1 from './components/ComponentDidMount1/ComponentDidMountPrac1';
+import ReacAsync from './components/ReacAsync/ReacAsync';
 const App = () => {
   return (
     <div>
@@ -29,7 +30,10 @@ const App = () => {
       {/* <Shopping/> */}
       {/* <FormBoxList/> */}
       {/* <Todo/> */}
-      <ComponentDidMountPrac1/>
+      {/* <ComponentDidMountPrac1/> */}
+      <ReacAsync 
+        username="jhpp114"
+      />
     </div>
   )
 }
