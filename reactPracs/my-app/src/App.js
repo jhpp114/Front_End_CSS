@@ -10,7 +10,8 @@ import React from 'react'
 // import FormPrac from './components/FormPrac/FormPrac';
 // import Shopping from './components/FormPrac2/Shopping';
 // import FormBoxList from './components/FormColorBox/FormBoxList';
-import Todo from './components/TodoApp/Todo';
+// import Todo from './components/TodoApp/Todo';
+import ComponentDidMountPrac1 from './components/ComponentDidMount1/ComponentDidMountPrac1';
 const App = () => {
   return (
     <div>
@@ -27,7 +28,8 @@ const App = () => {
       {/* <FormPrac/> */}
       {/* <Shopping/> */}
       {/* <FormBoxList/> */}
-      <Todo/>
+      {/* <Todo/> */}
+      <ComponentDidMountPrac1/>
     </div>
   )
 }
