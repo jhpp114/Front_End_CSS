@@ -12,7 +12,8 @@ import React from 'react'
 // import FormBoxList from './components/FormColorBox/FormBoxList';
 // import Todo from './components/TodoApp/Todo';
 // import ComponentDidMountPrac1 from './components/ComponentDidMount1/ComponentDidMountPrac1';
-import ReacAsync from './components/ReacAsync/ReacAsync';
+// import ReacAsync from './components/ReacAsync/ReacAsync';
+import CardDisplay from './components/CardDisplay/CardDeck'
 const App = () => {
   return (
     <div>
@@ -31,9 +32,10 @@ const App = () => {
       {/* <FormBoxList/> */}
       {/* <Todo/> */}
       {/* <ComponentDidMountPrac1/> */}
-      <ReacAsync 
+      {/* <ReacAsync 
         username="jhpp114"
-      />
+      /> */}
+      <CardDisplay/>
     </div>
   )
 }
