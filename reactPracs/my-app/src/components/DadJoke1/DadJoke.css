@@ -1,0 +1,30 @@
+.jokeList {
+    display: flex;
+    width: 80%;
+    height: 80%;
+}
+
+.jokeList-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background-color: rgb(46, 43, 223);
+    text-align: center;
+    z-index: 1;
+}
+
+.jokeList-sidebar img {
+    width: 180px;
+    height: 180px;
+}
+
+.jokeList-joke {
+    height: 90%;
+    background-color: rgb(221, 221, 221);
+    align-self: center;
+    padding: 1rem;
+    width: 70%;
+    overflow: scroll;
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 // import PokeDex from './components/poket/Pokedex'
 // import PokeGame from './components/poket/PokeGame'
 // import SCContainer from './components/StateClicker/SCContainer'
@@ -13,10 +14,11 @@ import React from 'react'
 // import Todo from './components/TodoApp/Todo';
 // import ComponentDidMountPrac1 from './components/ComponentDidMount1/ComponentDidMountPrac1';
 // import ReacAsync from './components/ReacAsync/ReacAsync';
-import CardDisplay from './components/CardDisplay/CardDeck'
+// import CardDisplay from './components/CardDisplay/CardDeck'
+import DadJoke1 from './components/DadJoke1/DadJoke'
 const App = () => {
   return (
-    <div>
+    <div className="App">
       {/* <PokeDex/> */}
       {/* <PokeGame/> */}
       {/* <SCContainer/> */}
@@ -35,7 +37,8 @@ const App = () => {
       {/* <ReacAsync 
         username="jhpp114"
       /> */}
-      <CardDisplay/>
+      {/* <CardDisplay/> */}
+      <DadJoke1/>
     </div>
   )
 }
