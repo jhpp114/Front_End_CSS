@@ -16,6 +16,7 @@ class DadJoke extends Component {
         };
         this.handleVote = this.handleVote.bind(this);
         this.generateData = this.generateData.bind(this);
+        this.handleAdd = this.handleAdd.bind(this);
     }
     
     componentDidMount() {
@@ -38,10 +39,14 @@ class DadJoke extends Component {
             jokes.push({id:uuidv4(), eachJokeData: eachJokeData.joke, vote: 0});
         }
         console.log(jokes);
-        this.setState({
-            jokes: jokes
-        });
+        this.setState(prevState => ({
+            jokes: [...prevState.jokes, ...jokes]
+        }));
         window.localStorage.setItem('jokes', JSON.stringify(jokes));
+    }
+
+    handleAdd() {
+        this.generateData();
     }
 
     handleVote(id, delta) {
@@ -50,7 +55,10 @@ class DadJoke extends Component {
             jokes: prevState.jokes.map(eachJoke => 
                 eachJoke.id === id? {...eachJoke, vote: eachJoke.vote + delta }: eachJoke
             )
-        }));
+        }),
+            // callback function for setState
+            () => window.localStorage.setItem('jokes', JSON.stringify(this.state.jokes))
+        );
     }
 
     render() {
@@ -59,7 +67,7 @@ class DadJoke extends Component {
                 <div className="jokeList-sidebar">
                     <h1 className="jokeList-title">Dad Jokes</h1>
                     <img src="https://images.unsplash.com/photo-1562037283-5346e96c7ee9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1305&q=80" alt=""/>
-                    <button>New Joke</button>
+                    <button onClick={this.handleAdd}>New Joke</button>
                 </div>
                 
                 <div className="jokeList-joke">
