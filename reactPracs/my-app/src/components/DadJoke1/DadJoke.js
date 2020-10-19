@@ -17,6 +17,8 @@ class DadJoke extends Component {
         this.handleVote = this.handleVote.bind(this);
         this.generateData = this.generateData.bind(this);
         this.handleAdd = this.handleAdd.bind(this);
+        this.seenJoke = new Set(this.state.jokes.map(s => s.eachJokeData));
+        console.log(this.seenJoke);
     }
     
     componentDidMount() {
@@ -35,8 +37,14 @@ class DadJoke extends Component {
                 }
             }
             );
-            const eachJokeData = eachJoke.data;
-            jokes.push({id:uuidv4(), eachJokeData: eachJokeData.joke, vote: 0});
+            let eachJokeData = eachJoke.data.joke;
+            if (!this.seenJoke.has(eachJokeData)) {
+                jokes.push({id:uuidv4(), eachJokeData: eachJokeData, vote: 0});
+            } else {
+                console.log("Found Duplicate!");
+                console.log(eachJokeData);
+            }
+            
         }
         console.log(jokes);
         this.setState(prevState => ({
