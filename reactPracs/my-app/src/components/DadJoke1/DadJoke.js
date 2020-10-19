@@ -12,12 +12,19 @@ class DadJoke extends Component {
         super(props);
         this.state = {
             joke: null
-        ,   jokes: []
+        ,   jokes: JSON.parse(window.localStorage.getItem('jokes') || "[]")
         };
         this.handleVote = this.handleVote.bind(this);
+        this.generateData = this.generateData.bind(this);
     }
     
-    async componentDidMount() {
+    componentDidMount() {
+        if (this.state.jokes.length === 0) {
+            this.generateData();
+        }
+    }
+
+    async generateData() {
         let jokes = [];
         while (jokes.length < this.props.startingJokeNum) {
             const eachJoke = await axios.get('https://icanhazdadjoke.com/',
@@ -28,13 +35,13 @@ class DadJoke extends Component {
             }
             );
             const eachJokeData = eachJoke.data;
-            
             jokes.push({id:uuidv4(), eachJokeData: eachJokeData.joke, vote: 0});
         }
         console.log(jokes);
         this.setState({
             jokes: jokes
         });
+        window.localStorage.setItem('jokes', JSON.stringify(jokes));
     }
 
     handleVote(id, delta) {
