@@ -38,7 +38,7 @@ class GamePokeGame extends Component {
                 }
                 <div>
                     <GamePokedex data={pokeRandomEven}/>
-                </div>
+                </div> 
                 {
                     pokeEvenTotal < pokeOddTotal? 
                     <h1 className='win'>Win {pokeOddTotal}</h1>
