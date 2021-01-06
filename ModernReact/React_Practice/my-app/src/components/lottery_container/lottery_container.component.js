@@ -6,6 +6,7 @@ const LotteryContainer = () => {
     return (
         <div>
             <Lottery/>
+            <Lottery title='mini Daily' maxBall={4} maxNum={40}/>
             {/* <Ball num={1}/> */}
         </div>
     )
