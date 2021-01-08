@@ -5,7 +5,7 @@ let words = [
 ,   'love'
 ];
 
-const randomIndex = (words) => {
+const randomIndex = () => {
     const index = Math.floor(Math.random() * words.length);
     return words[index];
 }
