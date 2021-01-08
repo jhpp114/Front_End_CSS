@@ -5,6 +5,7 @@ import './App.css';
 import Number from './components/number/number.component';
 import LotteryContainer from './components/lottery_container/lottery_container.component';
 import RandomButton from './components/randomButton/randomButton.component';
+import RemoveItem from './components/removeItem/removeItem.component';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       {/* <Food/> */}
       {/* <Number/> */}
       {/* <LotteryContainer/> */}
-      <RandomButton/>
+      {/* <RandomButton/> */}
+      <RemoveItem/>
     </div>
   );
 }
