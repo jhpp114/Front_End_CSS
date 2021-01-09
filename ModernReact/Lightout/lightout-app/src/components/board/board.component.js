@@ -60,19 +60,50 @@ import Cell from '../cell/cell.component';
      }
 
      flipCellsAround(coord) {
-         let { nCols, nRows } = this.props;
+         console.log("Fliped", coord);
+         let { ncols, nrows } = this.props;
          let board = this.state.board;
          let [y,x] = coord.split("-").map(Number);
-
+        console.log(`asdf${this.state.board[y][x]}`);
          function flipCell(y,x) {
              // if this coord is actually on board, flip it
-             if (x >= 0 && x < nCols && y >= 0 && y < nRows) {
+             if (x >= 0 && x < ncols && y >= 0 && y < nrows) {
                  board[y][x] = !board[y][x];
              }
 
              // Todo: flip this cell and the cells around it
              // Win when the cell is turned off 
          }
+         
+         function isPlayerWon(board) {
+            let hasWon = true;
+            for (let i = 0; i < nrows.length; i++ ) {
+                for (let j = 0; j < ncols.length; j++) {
+                    if (board[i][j] === false) {
+                        hasWon = false;
+                        return hasWon;
+                    }
+                }
+            }
+            return hasWon;
+         }
+
+         // flip initial
+         flipCell(y,x);
+         // flip left and right
+         flipCell(y,x+1);
+         flipCell(y,x-1);
+         // flip top and bottom
+         flipCell(y+1, x);
+         flipCell(y-1, x);
+         
+         let hasWon = board.every(row => row.every(cell => !cell));
+         this.setState({
+             board: board,
+             hasWon: hasWon
+         }, () => {
+             console.log(this.state.hasWon);
+         });
      }
 
      render() {
@@ -80,9 +111,14 @@ import Cell from '../cell/cell.component';
          for (let i = 0; i < this.props.nrows; i++) {
              let tableRows = [];
              for (let j = 0; j < this.props.ncols; j++) {
-                 tableRows.push(<Cell isLit={this.state.board[i][j]}/>)
+                 let coord = `${i}-${j}`
+                 tableRows.push(<Cell 
+                    key={coord} 
+                    isLit={this.state.board[i][j]} 
+                    flipCellsAroundMe={() => this.flipCellsAround(coord)}
+                    />)
              }
-             tableData.push(<tr>{tableRows}</tr>);
+             tableData.push(<tr key={`${i}`}>{tableRows}</tr>);
          }
          return (
             <table>
