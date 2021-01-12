@@ -5,8 +5,8 @@ class NewBoxForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            width: 0
-        ,   height: 0
+            width: ''
+        ,   height: ''
         ,   backgroudColor: ''
         }
         // this.handleChange = this.handleChange.bind(this);
@@ -22,7 +22,10 @@ class NewBoxForm extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log("Submit Clicked");
+        const newBoxItem = {
+            width: this.state.width
+        }
+        this.props.createNewBox();
     }
     render() {
         return (
@@ -31,6 +34,7 @@ class NewBoxForm extends Component {
                     <div>
                         <label htmlFor='width'>Width: </label>
                         <input 
+                            id='width'
                             type='text'
                             name='width'
                             value={this.state.width}
@@ -40,6 +44,7 @@ class NewBoxForm extends Component {
                     <div>
                         <label htmlFor='height'>Height: </label>
                         <input 
+                            id='height'
                             type='text'
                             name='height'
                             value={this.state.height}
@@ -49,6 +54,7 @@ class NewBoxForm extends Component {
                     <div>
                         <label htmlFor='backgroudColor'>Background Color: </label>
                         <input
+                            id='backgroundColor'
                             type='text'
                             name='backgroundColor'
                             value={this.state.backgroudColor}
