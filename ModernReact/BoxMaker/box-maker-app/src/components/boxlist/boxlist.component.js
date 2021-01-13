@@ -7,20 +7,23 @@ class BoxList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            boxes: [
-                {width: 50, height: 100, backgroudColor: "purple"},
-                {width: 100, height: 50, backgroudColor: "blue"}
-            ]
+            boxes: []
         }
         this.createNewBox = this.createNewBox.bind(this);
+        this.removeBox = this.removeBox.bind(this);
     }
 
     createNewBox(newBox) {
+        console.log(newBox);
         this.setState({
             boxes: [...this.state.boxes, newBox]
-        }, () => {
-            console.log("A new box had been added");
-        })
+        });
+    }
+
+    removeBox(id) {
+        this.setState({
+            boxes: this.state.boxes.filter(eachBox => eachBox.id !== id)
+        });
     }
 
     render() {
@@ -30,9 +33,12 @@ class BoxList extends Component {
                 {
                     this.state.boxes.map( eachBox => (
                         <Box 
-                            backgroundColor={eachBox.backgroudColor}
+                            key={eachBox.id}
+                            id={eachBox.id}
+                            backgroundColor={eachBox.backgroundColor}
                             width={eachBox.width}
                             height={eachBox.height}
+                            removeBox={this.removeBox}
                         />
                     ))
                 }

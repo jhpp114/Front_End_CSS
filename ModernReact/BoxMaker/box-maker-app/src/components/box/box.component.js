@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 class Box extends Component {
     
+    handleClick = (event) => {
+        this.props.removeBox(this.props.id);
+    }
+
     render() {
         console.log(this.props);
         return (
@@ -12,7 +16,7 @@ class Box extends Component {
                 height: `${this.props.height}px`
                 }}>
                 </div>
-                <button>X</button>
+                <button onClick={this.handleClick}>X</button>
             </div>
         )
     }

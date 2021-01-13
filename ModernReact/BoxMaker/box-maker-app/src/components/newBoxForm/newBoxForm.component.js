@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './newBoxForm.style.css';
+import { v4 as uuidv4 } from 'uuid';
+
 
 class NewBoxForm extends Component {
     constructor(props) {
@@ -7,29 +9,32 @@ class NewBoxForm extends Component {
         this.state = {
             width: ''
         ,   height: ''
-        ,   backgroudColor: ''
+        ,   backgroundColor:''
         }
-        // this.handleChange = this.handleChange.bind(this);
-        // this.handleSubmit = this.handleChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        //this.handleSubmit = this.handleChange.bind(this);
     }
 
-    handleChange = (event) => {
-        console.log(event.target.name);
+    handleChange(evt) {
+        console.log(evt.target.name);
         this.setState({
-            [event.target.name]: event.target.value
+            [evt.target.name]: evt.target.value
         });
     }
 
-    handleSubmit = (event) => {
-        event.preventDefault();
-        const newBoxItem = {
-            width: this.state.width
-        }
-        this.props.createNewBox();
+    handleSubmit= (evt) => {
+        evt.preventDefault();
+        const newBox = {...this.state, id:uuidv4()}
+        this.props.createNewBox(newBox);
+        this.setState({
+            width: '',
+            height: '',
+            backgroundColor: ''
+        });
     }
     render() {
         return (
-            <div>
+            // <div>
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <label htmlFor='width'>Width: </label>
@@ -57,13 +62,13 @@ class NewBoxForm extends Component {
                             id='backgroundColor'
                             type='text'
                             name='backgroundColor'
-                            value={this.state.backgroudColor}
+                            value={this.state.backgroundColor}
                             onChange={this.handleChange}
                         />
                     </div>
-                    <button type="submit">Create New Box</button>
+                    <button>Create New Box</button>
                 </form>
-            </div>
+            // </div>
         )
     }
 }
