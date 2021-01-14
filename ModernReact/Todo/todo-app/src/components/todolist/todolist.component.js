@@ -8,21 +8,34 @@ class TodoList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            todoLists: [
-                {
-                    todo:'study react'
-                },
-                {
-                    todo:'starcraft'
-                }
-            ]
+            todoLists: []
         };
         this.addNewTodo = this.addNewTodo.bind(this);
+        this.removeTodo = this.removeTodo.bind(this);
+        this.updateTodo = this.updateTodo.bind(this);
     }
 
     addNewTodo(todoItem) {
         this.setState({
             todoLists: [...this.state.todoLists, todoItem]
+        });
+    }
+
+    removeTodo(id) {
+        this.setState({
+            todoLists: this.state.todoLists.filter( eachTodo => eachTodo.id !== id )
+        });
+    }
+
+    updateTodo(id, newTodo) {
+        const updatedTodos = this.state.todoLists.map( eachTodo => {
+            if (eachTodo.id === id) {
+                eachTodo.todo = newTodo;
+            }
+            return eachTodo;
+        });
+        this.setState({
+            todoLists: updatedTodos
         });
     }
 
@@ -32,7 +45,13 @@ class TodoList extends Component {
                 <ul>
                     {
                         this.state.todoLists.map( eachTodo => (
-                            <TodoItem todoData={eachTodo.todo}/>
+                            <TodoItem 
+                                key={eachTodo.id}
+                                id={eachTodo.id}
+                                todoData={eachTodo.todo}
+                                removeItem={this.removeTodo}
+                                updateItem={this.updateTodo}
+                            />
                         ))
                     }
                 </ul>

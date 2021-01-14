@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import './newTodoForm.style.css';
 
+import { v4 as uuidv4 } from 'uuid';
+
 class NewTodoForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            todo: ''
+            todo: ""
         }
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event) {
@@ -16,11 +19,12 @@ class NewTodoForm extends Component {
         });
     }
 
-    handleSubmit = (event) => {
+    handleSubmit(event) {
         event.preventDefault();
-        this.props.addNewTodo(this.state);
+        const newTodo = {...this.state, id: uuidv4()}
+        this.props.addNewTodo(newTodo);
         this.setState({
-            todo: ''
+            todo: ""
         });
     }
 
