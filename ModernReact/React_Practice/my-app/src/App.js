@@ -7,6 +7,8 @@ import LotteryContainer from './components/lottery_container/lottery_container.c
 import RandomButton from './components/randomButton/randomButton.component';
 import RemoveItem from './components/removeItem/removeItem.component';
 import Loader from './components/componentDidMount/loader.component';
+import GithubUserInfo from './components/asyncComponentDidMount/githubUserInfo.component';
+
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
       {/* <LotteryContainer/> */}
       {/* <RandomButton/> */}
       {/* <RemoveItem/> */}
-      <Loader/>
+      {/* <Loader/> */}
+      <GithubUserInfo username="jhpp114"/>
+      <GithubUserInfo username="facebook"/>
     </div>
   );
 }
