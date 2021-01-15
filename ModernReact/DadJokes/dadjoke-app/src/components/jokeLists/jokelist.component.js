@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './jokelist.style.css';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid'
+import Joke from '../joke/joke.component';
 
 class JokeList extends Component {
     static defaultProps = {
@@ -32,12 +34,14 @@ class JokeList extends Component {
                 const response = await axios.get(jokesURL, {
                     headers: {Accept: "application/json"}
                 });
-                console.log(response.data);
+                // console.log(response.data);
                 let newJoke = response.data.joke;
                 // if it does not exist
                 if (!this.hasSeen.has(newJoke)) {
                     newJokes.push({
-                        joke: response.data.joke
+                        id: uuidv4(),
+                        joke: response.data.joke,
+                        vote: 0
                     });
                 } else {
                     console.log("Duplicate Joke Appeared");
@@ -45,20 +49,28 @@ class JokeList extends Component {
                     console.log("=======================");
                 }
             }
-            this.setState(prevState => ({
-                jokes: [...prevState.jokes, newJokes]
-            }));
+            this.setState((prevState) => ({
+                jokes: newJokes
+            }))
         } catch (error) {
             alert(error);
         }
+    }
+
+    handleVote(id, delta) {
+        this.setState( prevState => ({
+            jokes: prevState.jokes.map(eachJoke => (
+                eachJoke.id === id ? { ...eachJoke, vote: eachJoke.vote + delta } : eachJoke
+            ))
+        }))
     }
 
     render() {
         return (
             <div className='jokelist-container'>
                 <div className='jokelist-leftside'>
-                    <h1>Dad's Jokes</h1>
-                    <div>
+                    <h1 className='jokelist-leftside-title'>Dad's Jokes</h1>
+                    <div className='jokelist-leftside-icon-container'>
                         <i className='joke-list-rightside-smile far fa-grin-squint-tears'></i>
                     </div>
                     <div>
@@ -69,6 +81,20 @@ class JokeList extends Component {
                     <div>
                         {/* lists of jokes */}
                         <h3>Lists of Jokes</h3>
+                        <div className='jokelist-rightside-jokelists'>
+                            {
+                                this.state.jokes.map( eachJoke => (
+                                    <Joke
+                                        key={eachJoke.id}
+                                        id={eachJoke.id}
+                                        joke={eachJoke.joke}
+                                        vote={eachJoke.vote}
+                                        upVote={() => this.handleVote(eachJoke.id, 1)}
+                                        downVote={() => this.handleVote(eachJoke.id, -1)}
+                                    />
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
             </div>

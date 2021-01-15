@@ -22,6 +22,17 @@
     margin: 1rem;
 }
 
+
+.jokelist-leftside-title {
+    color :rgb(226, 115, 226);
+}
+
+.jokelist-leftside-icon-container {
+    border-radius: 50%;
+    padding: 0.5rem;
+    box-shadow: 2px 4px 10px 14px rgb(226, 115, 226);
+}
+
 .joke-list-rightside-smile {
     font-size: 10rem;
 }
@@ -45,6 +56,12 @@
 
 .jokelist-rightside {
     flex: 2;
-    height: 80vh;
-    background-color: red;
+    height: 85vh;
+    box-shadow: 0.5px 1px 1px 1px rgb(226, 115, 226);
+    border-radius: 2rem;
+}
+
+.jokelist-rightside-jokelists {
+    overflow: hidden;
+    
 }
