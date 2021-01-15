@@ -12,7 +12,7 @@ class JokeList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            jokes: []
+            jokes: JSON.parse(window.localStorage.getItem('jokes') || "[]")
         }
         this.hasSeen = new Set(this.state.jokes.map(eachJoke => eachJoke.joke));
         this.getJokes = this.getJokes.bind(this);
@@ -50,8 +50,9 @@ class JokeList extends Component {
                 }
             }
             this.setState((prevState) => ({
-                jokes: newJokes
+                jokes: [...prevState.jokes, ...newJokes]
             }))
+            window.localStorage.setItem('jokes', JSON.stringify(newJokes));
         } catch (error) {
             alert(error);
         }
@@ -62,7 +63,9 @@ class JokeList extends Component {
             jokes: prevState.jokes.map(eachJoke => (
                 eachJoke.id === id ? { ...eachJoke, vote: eachJoke.vote + delta } : eachJoke
             ))
-        }))
+        }), ()=> {
+            window.localStorage.setItem('jokes', JSON.stringify(this.state.jokes));
+        })
     }
 
     render() {

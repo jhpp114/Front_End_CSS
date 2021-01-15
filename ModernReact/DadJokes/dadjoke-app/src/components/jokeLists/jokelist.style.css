@@ -59,9 +59,10 @@
     height: 85vh;
     box-shadow: 0.5px 1px 1px 1px rgb(226, 115, 226);
     border-radius: 2rem;
+    overflow: scroll;
 }
 
 .jokelist-rightside-jokelists {
-    overflow: hidden;
+    overflow: scroll;
     
 }
