@@ -1,0 +1,50 @@
+.jokelist-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 90vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.jokelist-leftside {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 90vh;
+    margin: 0rem, 0rem;
+    border: 1px solid purple;
+    border-radius: 2rem;
+    padding: 1rem;
+    align-items: center;
+    width: 30%;
+    margin: 1rem;
+}
+
+.joke-list-rightside-smile {
+    font-size: 10rem;
+}
+
+.joke-list-rightside-btn {
+    border: none;
+    padding: 0.5rem;
+    width: 180px;
+    outline: none;
+    background-color: purple;
+    color: gold;
+    font-weight: bold;
+    border-radius: 2rem;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.joke-list-rightside-btn:hover {
+    opacity: 1;
+}
+
+.jokelist-rightside {
+    flex: 2;
+    height: 80vh;
+    background-color: red;
+}
