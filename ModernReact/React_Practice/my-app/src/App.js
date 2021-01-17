@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-
 // import Food from './components/food/food';
 import Number from './components/number/number.component';
 import LotteryContainer from './components/lottery_container/lottery_container.component';
@@ -9,6 +8,7 @@ import RemoveItem from './components/removeItem/removeItem.component';
 import Loader from './components/componentDidMount/loader.component';
 import GithubUserInfo from './components/asyncComponentDidMount/githubUserInfo.component';
 
+import RouterDOM from './components/routerDom/routerDom.component';
 
 function App() {
   return (
@@ -19,8 +19,9 @@ function App() {
       {/* <RandomButton/> */}
       {/* <RemoveItem/> */}
       {/* <Loader/> */}
-      <GithubUserInfo username="jhpp114"/>
-      <GithubUserInfo username="facebook"/>
+      {/* <GithubUserInfo username="jhpp114"/>
+      <GithubUserInfo username="facebook"/> */}
+      <RouterDOM/>
     </div>
   );
 }

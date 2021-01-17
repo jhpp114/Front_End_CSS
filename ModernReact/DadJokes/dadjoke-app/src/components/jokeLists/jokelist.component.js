@@ -51,8 +51,9 @@ class JokeList extends Component {
             }
             this.setState((prevState) => ({
                 jokes: [...prevState.jokes, ...newJokes]
-            }))
-            window.localStorage.setItem('jokes', JSON.stringify(newJokes));
+            }), () => {
+                
+            });
         } catch (error) {
             alert(error);
         }

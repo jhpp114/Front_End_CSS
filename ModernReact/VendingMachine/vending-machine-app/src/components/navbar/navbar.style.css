@@ -1,0 +1,17 @@
+.vending-machine-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    font-weight: bold;
+    color: brown;
+    cursor: pointer;
+}
+
+.activeLink {
+    color: navy;
+}
