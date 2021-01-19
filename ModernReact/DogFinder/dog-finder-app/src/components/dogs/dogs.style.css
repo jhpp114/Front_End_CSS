@@ -1,0 +1,15 @@
+.dogs {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.dogs-dog {
+    cursor: pointer;
+}
+
+.dogs-images {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
