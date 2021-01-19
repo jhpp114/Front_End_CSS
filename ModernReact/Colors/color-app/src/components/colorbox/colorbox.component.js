@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './colorbox.style.css';
 
 class colorbox extends Component {
     render() {

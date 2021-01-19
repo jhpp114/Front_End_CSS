@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './palette.style.css';
 import ColorBox from '../colorbox/colorbox.component';
 class palette extends Component {
     render() {
