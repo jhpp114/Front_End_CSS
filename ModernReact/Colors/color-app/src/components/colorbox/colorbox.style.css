@@ -5,4 +5,52 @@
     margin: 0 auto;
     position: relative;
     cursor: pointer;
+    margin-bottom: -3.9px;
+}
+
+.copy-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 1rem;
+    margin-left: -50px;
+    margin-top: -25px;
+    opacity: 0;
+    line-height: 30px;
+}
+
+.colorbox:hover .copy-button {
+    opacity: 1;
+}
+
+.box-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 12px;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.see-more {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
 }
