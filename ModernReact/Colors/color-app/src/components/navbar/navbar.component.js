@@ -7,6 +7,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
+import { Link } from 'react-router-dom';
 
 class navbar extends Component {
     constructor(props) {
@@ -38,7 +39,7 @@ class navbar extends Component {
         return (
             <nav className='navbar'>
                 <div className='logo'>
-                    <a href="#">ReactColorApp</a>
+                    <Link to='/'>ReactColorApp</Link>
                 </div>
                 <div className='nav-container'>
                     <span>Level: {level}</span>
