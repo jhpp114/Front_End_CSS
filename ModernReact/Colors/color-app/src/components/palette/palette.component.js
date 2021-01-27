@@ -28,10 +28,17 @@ class palette extends Component {
 
     render() {
         const { level, format } = this.state;
-        const { colors, emoji, paletteName } = this.props.palette; 
+        const { colors, emoji, paletteName, id } = this.props.palette; 
         const Colors = colors[level].map( eachColor => (
-            <ColorBox key={eachColor.id} background={eachColor[format]} name={eachColor.name}/>
+            <ColorBox 
+                key={eachColor.id} 
+                background={eachColor[format]} 
+                name={eachColor.name} 
+                id={eachColor.id}
+                eachPaletteId={id}
+            />
         ))
+        // console.log(this.props.palette);
         return (
             <div className='palette'>
                 <Navbar level={level} changeLevel={this.changeLevel} formatChange={this.formatChange} />
