@@ -35,6 +35,10 @@ const styles = {
 
 class palettes extends Component {
     
+    gotoPalaette(id) {
+        this.props.history.push(`/palette/${id}`);
+    }
+
     render() {
         // console.log("From Palettes");
         // console.log(this.props.palette);
@@ -51,8 +55,8 @@ class palettes extends Component {
                             palette.map( eachPalette => (
                                 <p>
                                     {/* <Link to={`/palette/${eachPalette.id}`}>{eachPalette.paletteName}</Link> */}
-                                    {console.log(eachPalette)}
-                                    <MiniPalette {...eachPalette}/>
+                                    
+                                    <MiniPalette {...eachPalette} handleClick={ () => this.gotoPalaette(eachPalette.id)}/>
                                 </p>
                             ))
                         }
