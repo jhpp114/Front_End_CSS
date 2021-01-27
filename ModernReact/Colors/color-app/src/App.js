@@ -14,7 +14,7 @@ class App extends Component {
     return targetPalette;
   }
   render() {
-    console.log(generatePalette(Colors[1]));
+    // console.log(generatePalette(Colors[1]));
     return (
       <Switch>
         <Route exact path='/' render={()=> <Palettes palette={Colors}/>}/>
